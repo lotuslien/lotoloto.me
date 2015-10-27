@@ -75,7 +75,7 @@ environment.init = function(){
 		zRange: 1500,
 		speed: -Math.PI / 600,
 		className: "fish",
-		patternSrc: "http://nullpublic.com/wp-content/uploads/2011/09/circle_gradient.png",
+		patternSrc: "http://oi47.tinypic.com/2u8fhmx.jpg",
 	})
 
 	this.fishCutouts2 = new MX.Tableaux.FishCutouts({
@@ -88,7 +88,7 @@ environment.init = function(){
 		zRange: 3000,
 		speed: Math.PI / 400,
 		className: "fish",
-		patternSrc: "http://nullpublic.com/wp-content/uploads/2011/09/circle_gradient.png",
+		patternSrc: "http://oi47.tinypic.com/2u8fhmx.jpg",
 	})
 
 	this.fishCutouts3 = new MX.Tableaux.FishCutouts({
@@ -101,7 +101,7 @@ environment.init = function(){
 		zRange: 2000,
 		speed: -Math.PI / 500,
 		className: "fish",
-		patternSrc: "http://nullpublic.com/wp-content/uploads/2011/09/circle_gradient.png",
+		patternSrc: "http://oi47.tinypic.com/2u8fhmx.jpg",
 	})
 
 
