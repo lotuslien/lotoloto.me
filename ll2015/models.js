@@ -15,10 +15,10 @@ MX.Tableaux.Models = MX.Tableau.extend({
 			spacingY: 0,
 		})
 
-		for (var i = 1; i <= 3; i++) {
+		for (var i = 1; i <= 9; i++) {
 			girl = new MX.Image({
 				src: "http://i.imgur.com/tkRFIyu.gif",
-				x: (100 + (3-i) * 40) * pow(-1, i),
+				x: (100 + (9-i) * 40) * pow(-1, i),
 				y: (i-1) * opt.spacingY + opt.y,
 				z: 400 * i + opt.z,
 				scale: 0.5,
