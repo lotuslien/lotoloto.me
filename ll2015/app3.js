@@ -179,9 +179,9 @@ app.position = function(obj){
 }
 
 var share = {
-	"url": "https://kenzo.com/nofishnonothing/",
-	"facebook_msg": "United to protect the oceans! Support the Blue Marine Foundation with the KENZO #nofishnonothing collection",
-	"twitter_msg": "United to protect the oceans! Support @Bluemarinef with the @kenzo #nofishnonothing collection",
+	"url": "http://lotoloto.me/ll2015/index.html",
+	"facebook_msg": "http://lotoloto.me/ll2015/index.html | place-holder text",
+	"twitter_msg": "http://lotoloto.me/ll2015/index.html | place-holder text",
 	"openLink": function (url) {
 		window.open(url, "_blank");
 	},
