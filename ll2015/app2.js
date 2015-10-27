@@ -44,7 +44,7 @@ environment.init = function(){
 		y: 150,
 		z: 5000,
 		rotationX: -PI/20,
-		backgroundImage: "http://docs.geoserver.org/2.5.x/en/user/_images/raster_transparentgradient1.png"
+		backgroundImage: "http://dumpfm.s3.amazonaws.com/images/20120209/1328764462143-dumpfm-qil-water3b.gif"
 	})
 
 	var intro = new MX.Tableaux.IntroText({
