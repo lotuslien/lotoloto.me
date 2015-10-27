@@ -35,7 +35,7 @@ MX.Tableaux.Fish = MX.Tableau.extend({
 			scale = randrange(opt.minScale, opt.maxScale)
 			
 			fish = new MX.Image({
-				src: "http://i.imgur.com/" + ((i%3)+1) + ".png",
+				src: "http://i.imgur.com/HtOBLiV.png",
 				x: x + opt.x,
 				y: y + opt.y,
 				z: z + opt.z,
