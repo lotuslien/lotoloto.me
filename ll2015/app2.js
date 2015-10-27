@@ -40,11 +40,11 @@ environment.init = function(){
 		scale: 5,
 		y: -1010,
 		z: 2000,
-		scale: 3,
+		scale: 6,
 		y: 150,
 		z: 5000,
 		rotationX: -PI/20,
-		backgroundImage: "http://i.asdf.us/im/fc/gradient_white-MediumOrchid3_1332202989_bky.jpg"
+		backgroundImage: "http://okfocus.s3.amazonaws.com/kenzo/img/waves_blue.pngg"
 	})
 
 	var intro = new MX.Tableaux.IntroText({
