@@ -23,21 +23,21 @@ MX.Tableaux.FishCutouts = MX.Tableau.extend({
 			patternSrc: "http://okfocus.s3.amazonaws.com/kenso/underwater/bwrepeat2.png"
 		})
 	
-		var fish_base = 'http://okfocus.s3.amazonaws.com/kenzo/img/svg/'
+		var fish_base = 'http://okfocus.s3.amazonaws.com/kenso/underwater/'
 		var fish_svgs = [
-			'fish1.svg',
-			'fish2.svg',
-			'fish3.svg',
-			'fish4.svg',
-			'jellyfish1.svg',
-			'shark1.svg',
-			'shark2.svg',
-			'sponge1.svg',
-			'starfish1.svg',
-			'stingray1.svg',
-			'swordfish1.svg',
-			'whale1.svg',
-			'whale2.svg'
+			'bwrepeat2.png',
+			'bwrepeat2.png',
+			'bwrepeat2.png',
+			'bwrepeat2.png',
+			'bwrepeat2.png',
+			'bwrepeat2.png',
+			'bwrepeat2.png',
+			'bwrepeat2.png',
+			'bwrepeat2.png',
+			'bwrepeat2.png',
+			'bwrepeat2.png',
+			'bwrepeat2.png',
+			'bwrepeat2.png'
 		]
 		opt.xRange /= 2
 		opt.zRange /= 2
