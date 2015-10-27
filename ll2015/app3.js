@@ -65,7 +65,7 @@ if (is_mobile) {
 	window.location.href = "mobile.html"
 }
 else if ($.browser.msie || ! has3d()) {
-	window.location.href = "http://lotoloto.me"
+	window.location.href = "https://www.kenzo.com/en/blog/tag/no-fish-no-nothing_1298/"
 }
 
 var scene,
@@ -179,9 +179,9 @@ app.position = function(obj){
 }
 
 var share = {
-	"url": "http://lotoloto.me/ll2015/index.html",
-	"facebook_msg": "lotoloto–placeholdertext",
-	"twitter_msg": "lotoloto–placeholdertext",
+	"url": "https://kenzo.com/nofishnonothing/",
+	"facebook_msg": "United to protect the oceans! Support the Blue Marine Foundation with the KENZO #nofishnonothing collection",
+	"twitter_msg": "United to protect the oceans! Support @Bluemarinef with the @kenzo #nofishnonothing collection",
 	"openLink": function (url) {
 		window.open(url, "_blank");
 	},
