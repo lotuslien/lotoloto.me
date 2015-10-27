@@ -19,10 +19,10 @@ MX.Tableaux.WaterBox = MX.Tableau.extend({
 	
 		// Small water box
 		this.water = new MX.BoxDimensions({
-			width: opt.width,
+			width: opt.width,  
 			height: opt.height,
 			depth: opt.depth,
-			backgroundImage: "http://i.imgur.com/tkRFIyu.gif",
+			backgroundImage: "http://38.media.tumblr.com/tumblr_lx7cdufXDf1qzu8e8o1_400.gif",
 			borderWidth: 0,
 			borderColor: "blue",
 			x: opt.x,
