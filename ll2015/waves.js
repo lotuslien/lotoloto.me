@@ -11,7 +11,7 @@ MX.Tableaux.Waves = MX.Tableau.extend({
 		})
 
 		wave = new MX.Image({
-			src: "http://41.media.tumblr.com/0b77dcfc0cd180b343313769995f2571/tumblr_ml7mmzjpj61r6wq7io1_500.jpg",
+			src: "http://i.imgur.com/tkRFIyu.gif",
 			x: opt.x - 200 - opt.gap/2,
 			y: opt.y + 200,
 			z: opt.z + 60,
@@ -21,7 +21,7 @@ MX.Tableaux.Waves = MX.Tableau.extend({
 		scene.add(wave)
 
 		wave = new MX.Image({
-			src: "http://41.media.tumblr.com/0b77dcfc0cd180b343313769995f2571/tumblr_ml7mmzjpj61r6wq7io1_500.jpg",
+			src: "http://i.imgur.com/tkRFIyu.gif",
 			x: opt.x + 200 + opt.gap/2,
 			y: opt.y + 400,
 			z: opt.z + 100,
