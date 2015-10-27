@@ -83,7 +83,7 @@ MX.Tableaux.FishCutouts = MX.Tableau.extend({
 			}
 			pattern.src = opt.patternSrc
 		}
-		texture.src = "http://i.imgur.com/tkRFIyu.gif"
+		texture.src = "http://okfocus.s3.amazonaws.com/kenso/underwater/bwrepeat2.png"
 
 	},
 	
