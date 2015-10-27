@@ -18,7 +18,7 @@ MX.Tableaux.Models = MX.Tableau.extend({
 
 		for (var i = 1; i <= 9; i++) {
 			girl = new MX.Image({
-				src: "http://okfocus.s3.amazonaws.com/kenso/underwater/bwrepeat2" + i + ".png",
+				src: "http://okfocus.s3.amazonaws.com/kenso/underwater/bwrepeat2/" + i + ".png",
 				x: (100 + (9-i) * 40) * pow(-1, i),
 				y: (i-1) * opt.spacingY + opt.y,
 				z: 400 * i + opt.z,
