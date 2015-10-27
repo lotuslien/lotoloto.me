@@ -1,4 +1,3 @@
-
 MX.Tableaux.WaterBox = MX.Tableau.extend({
 
 	init: function(opt){
