@@ -39,11 +39,8 @@ MX.Tableaux.Slogans = MX.Tableau.extend({
 		ctx.fillRect(0,0,side,side);
 
 		var images = [
-			'http://okfocus.s3.amazonaws.com/kenzo/img/slogans/85percent.png',
-			'http://okfocus.s3.amazonaws.com/kenzo/img/slogans/1990s.png',
-			'http://okfocus.s3.amazonaws.com/kenzo/img/slogans/sharks.png',
-			'http://okfocus.s3.amazonaws.com/kenzo/img/slogans/allspecies.png',
-			'http://okfocus.s3.amazonaws.com/kenzo/img/slogans/since1950.png'
+			'http://i.imgur.com/5ugS7uv.png',
+			'http://i.imgur.com/5ugS7uv.png',
 		]
 		
 		var lean = PI/10
