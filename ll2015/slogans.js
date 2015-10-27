@@ -31,10 +31,6 @@ MX.Tableaux.Slogans = MX.Tableau.extend({
 
 		var ctx = pattern.getContext("2d");
 
-		var grd = ctx.createLinearGradient(0,0,170,0);
-		grd.addColorStop(0, "blue");
-		grd.addColorStop(1, "blue");
-
 		ctx.fillStyle = grd;
 		ctx.fillRect(0,0,side,side);
 
