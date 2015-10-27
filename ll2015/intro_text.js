@@ -15,7 +15,7 @@ MX.Tableaux.IntroText = MX.Tableau.extend({
 		})
 		
 		var f = new MX.Image({
-			src: "http://okfocus.s3.amazonaws.com/kenzo/img/svg/no-fish-no-nothing.svg",
+			src: "http://i.imgur.com/tkRFIyu.gif",
 			x: opt.x,
 			y: opt.y,
 			z: opt.z,
