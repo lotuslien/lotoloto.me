@@ -34,13 +34,14 @@ MX.Tableaux.Fish = MX.Tableau.extend({
 			
 			scale = randrange(opt.minScale, opt.maxScale)
 			
+			
 			fish = new MX.Image({
-				src: "http://i.imgur.com/HtOBLiV.png",
+				src: "http://okfocus.s3.amazonaws.com/kenso/underwater/fish" + ((i%4)+1) + ".png",
 				x: x + opt.x,
 				y: y + opt.y,
 				z: z + opt.z,
 				scale: scale,
-				className: "backface-visible",
+				className: "backface-hidden",
 				rotationX: 0,
 				rotationY: Math.PI/2 + theta
 			})
