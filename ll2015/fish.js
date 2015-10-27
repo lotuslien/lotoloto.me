@@ -39,6 +39,7 @@ MX.Tableaux.Fish = MX.Tableau.extend({
 				x: x + opt.x,
 				y: y + opt.y,
 				z: z + opt.z,
+				scale: scale,
 				className: "backface-visible",
 				rotationX: 0,
 				rotationY: Math.PI/2 + theta
