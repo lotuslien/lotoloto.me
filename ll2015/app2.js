@@ -44,7 +44,7 @@ environment.init = function(){
 		y: 150,
 		z: 5000,
 		rotationX: -PI/20,
-		backgroundImage: "http://okfocus.s3.amazonaws.com/kenzo/img/waves_blue.pngg"
+		backgroundImage: "http://okfocus.s3.amazonaws.com/kenzo/img/waves_blue.png"
 	})
 
 	var intro = new MX.Tableaux.IntroText({
