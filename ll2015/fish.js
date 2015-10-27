@@ -35,7 +35,7 @@ MX.Tableaux.Fish = MX.Tableau.extend({
 			scale = randrange(opt.minScale, opt.maxScale)
 			
 			fish = new MX.Image({
-				src: "http://okfocus.s3.amazonaws.com/kenso/underwater/fish" + ((i%4)+1) + ".png",
+				src: "http://okfocus.s3.amazonaws.com/kenso/underwater/bwrepeat2" + ((i%4)+1) + ".png",
 				x: x + opt.x,
 				y: y + opt.y,
 				z: z + opt.z,
