@@ -36,7 +36,7 @@ MX.Tableaux.Fish = MX.Tableau.extend({
 			
 			
 			fish = new MX.Image({
-				src: "http://okfocus.s3.amazonaws.com/kenso/underwater/fish" + ((i%4)+1) + ".png",
+				src: "none yet",
 				x: x + opt.x,
 				y: y + opt.y,
 				z: z + opt.z,
