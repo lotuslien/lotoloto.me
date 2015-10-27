@@ -44,7 +44,7 @@ environment.init = function(){
 		y: 150,
 		z: 5000,
 		rotationX: -PI/20,
-		backgroundImage: "http://okfocus.s3.amazonaws.com/kenzo/img/PATTERNS/bg-4.jpg"
+		backgroundImage: "http://i.asdf.us/im/fc/gradient_white-MediumOrchid3_1332202989_bky.jpg"
 	})
 
 	var intro = new MX.Tableaux.IntroText({
@@ -75,7 +75,7 @@ environment.init = function(){
 		zRange: 1500,
 		speed: -Math.PI / 600,
 		className: "fish",
-		patternSrc: "http://okfocus.s3.amazonaws.com/kenso/underwater/bwrepeat2.png",
+		patternSrc: "http://oi47.tinypic.com/2u8fhmx.jpg",
 	})
 
 	this.fishCutouts2 = new MX.Tableaux.FishCutouts({
@@ -88,7 +88,7 @@ environment.init = function(){
 		zRange: 3000,
 		speed: Math.PI / 400,
 		className: "fish",
-		patternSrc: "http://i.asdf.us/im/fc/gradient_white-MediumOrchid3_1332202989_bky.jpg",
+		patternSrc: "http://oi47.tinypic.com/2u8fhmx.jpg",
 	})
 
 	this.fishCutouts3 = new MX.Tableaux.FishCutouts({
@@ -101,7 +101,7 @@ environment.init = function(){
 		zRange: 2000,
 		speed: -Math.PI / 500,
 		className: "fish",
-		patternSrc: "http://i.asdf.us/im/0c/gradient_teal-purple_1330660041.png",
+		patternSrc: "http://oi47.tinypic.com/2u8fhmx.jpg",
 	})
 
 
