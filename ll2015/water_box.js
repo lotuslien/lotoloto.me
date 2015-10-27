@@ -4,7 +4,7 @@ MX.Tableaux.WaterBox = MX.Tableau.extend({
 	init: function(opt){
 	
 		opt = defaults(opt, {
-			width: 200,
+			width: 500,
 			height: 200,
 			depth: 200,
 			x: 240,
