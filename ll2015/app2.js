@@ -37,14 +37,14 @@ environment.init = function(){
 	var floor = new MX.Tableaux.Floor({
 		width: 2500,
 		depth: 6000,
-		scale: 5,
+		scale: 3,
 		y: -1010,
 		z: 2000,
-		scale: 6,
+		scale: 3,
 		y: 150,
 		z: 5000,
 		rotationX: -PI/20,
-		backgroundImage: "http://okfocus.s3.amazonaws.com/kenzo/img/waves_blue.png"
+		backgroundImage: "http://docs.geoserver.org/2.5.x/en/user/_images/raster_transparentgradient1.png"
 	})
 
 	var intro = new MX.Tableaux.IntroText({
