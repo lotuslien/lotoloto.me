@@ -1,0 +1,331 @@
+
+/* Layout */
+
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, label, fieldset, input, p, blockquote, th, td { margin:0; padding:0 }
+a img { border:none }
+
+
+body{
+	overflow: hidden;
+}
+
+img {
+padding-bottom:10px;
+}
+
+ul {
+	list-style: none;
+	}
+
+#controllers {
+	position: absolute;
+	width: 80px;
+	left: 262px;
+	top: 125px;
+	}
+	
+	
+#leftcontrol{
+	display: inline-block;
+	height: 31px;
+	width: 28px;
+	background: url(imgs/arr-l1.png);
+}
+
+#leftcontrol:hover {
+cursor: pointer;
+
+	background: url(imgs/arr-l2.png);
+}
+
+#rightcontrol{
+	display: inline-block;
+	height: 31px;
+	width: 28px;
+	background: url(imgs/arr-r1.png);
+	}
+
+#rightcontrol:hover {
+	cursor: pointer;
+
+	background: url(imgs/arr-r2.png);
+}
+
+
+
+#images{
+	position: relative;
+	margin-top: 0px;
+	width: 990px;
+	height:500px;
+	margin: 0 auto;
+	padding-top: 35px;
+
+}
+
+
+#main{
+	position: relative;
+	margin-top: 0px;
+	width: 990px;
+	margin: 0 auto;
+	padding: 0px;
+}
+
+#mainp{
+	position: relative;
+	width: 440px;
+	float: left;
+	left: 240px;
+	top: 0px;
+	padding-bottom:100px;
+
+
+}
+
+#images div{
+	position: absolute;
+	margin-right: 24px;
+	padding:0px;
+
+}
+
+#header{
+	position: relative;
+	margin-top: 0px;
+	width: 990px;
+	height: 105px;
+	margin: 0 auto;
+	padding: 20px;
+	z-index:10;
+}
+
+#main-menu{
+	position: relative;
+	width: 214px;
+	float: left;
+	top: 0px;
+	margin-right:24px;
+}
+
+#sub-menu{
+	position: relative;
+	width: 540px;
+	float: left;
+	top: 0px;
+	margin-right:24px;
+	height: 120px;
+}
+
+
+#credits{
+	position: relative;
+	width: 160px;
+	float: left;
+	top: 0px;
+	margin-right:0px;
+	height: 110px;
+
+}
+
+#ptitle{
+	position: fixed;
+	width: 214px;
+	float: left;
+	top: 100px;
+	margin-right:24px;
+	height: 120px;
+}
+
+.fb-like{
+	margin-top:5px;
+	height: 30px;
+}
+
+
+/* Typography */
+
+h1 a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	letter-spacing: 1px;
+	font-weight: normal;
+ 	text-decoration: none;
+ 	text-transform: uppercase;
+	color: black;
+	line-height: 1.4;
+}
+
+h1 a:hover {
+	color: blue;
+}
+
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	letter-spacing: 1px;
+	font-weight: normal;
+ 	text-decoration: none;
+	color: black;
+	line-height: 1;
+}
+
+.text {
+	font-family: georgia,serif;
+	font-size: 15px;
+	letter-spacing: 1px;
+	font-weight: normal;
+ 	text-decoration: none;
+	color: blue;
+	line-height: 1.7;
+}
+
+.text a {
+	font-family: georgia,serif;
+	font-size: 15px;
+	letter-spacing: 1px;
+	font-weight: normal;
+ 	text-decoration: none;
+	color: blue;
+	line-height: 1.7;
+}
+
+.text a:hover{
+	color: black;
+
+}
+
+
+.cvtitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	letter-spacing: 3px;
+	font-weight: normal;
+ 	text-decoration: none;
+ 	text-transform: uppercase;
+ 	color: black;
+	line-height: 1.5;
+}
+
+
+
+.caption {
+	font-family: georgia, serif;
+	font-size: 10px;
+	letter-spacing: 1;
+	font-weight: normal;
+ 	text-decoration: none;
+	color: black;
+	line-height: 1.5;
+	display:block;
+}
+.menu a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	letter-spacing: 1px;
+	font-weight: normal;
+ 	text-decoration: none;
+	color: black;
+	line-height: 2;
+}
+
+.menu a:hover {
+	color: blue;
+}
+.menu {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	letter-spacing: 1px;
+	font-weight: normal;
+ 	text-decoration: none;
+	color: black;
+	line-height: 2;
+}
+
+.sub-menu a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	letter-spacing: 1px;
+	font-weight: normal;
+ 	text-decoration: none;
+	color: black;
+	line-height: 2;
+}
+
+.sub-menu a:hover {
+	border-bottom: solid black  2px;
+
+}
+
+
+.year {
+	font-family: Courier, monospace;
+	font-size: 10px;
+	letter-spacing: 1;
+	color: grey;
+	text-decoration: none;
+	line-height: 1.5;
+
+}
+
+.mail {
+	font-family: georgia,serif;
+	font-size: 10px;
+	letter-spacing: 1;
+	color: grey;
+	text-decoration: none;
+	line-height: 2;
+
+}
+
+.credit {
+	font-family: georgia,serif;
+	font-size: 8px;
+	letter-spacing: 1;
+	color: lightgrey;
+	text-decoration: none;
+	line-height: 1.4;
+
+}
+
+.credit a {
+	font-family: georgia,serif;
+	font-size: 8px;
+	letter-spacing: 1;
+	color: lightgrey;
+	text-decoration: underline;
+	line-height: 1.4;
+
+}
+
+.credit a:hover{
+	font-family: georgia,serif;
+	font-size: 8px;
+	letter-spacing: 1;
+	color: blue;
+	text-decoration: none;
+	line-height: 1.4;
+
+}
+.title {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	letter-spacing: 1px;
+	font-weight: normal;
+ 	text-transform: uppercase;
+ 	text-decoration: none;
+	color: grey;
+	line-height: 1.5;
+
+}
+
+.gallery {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	letter-spacing: 1px;
+	font-style: italic;
+ 	text-decoration: none;
+	color: grey;
+	line-height: 1.5;
+
+}
