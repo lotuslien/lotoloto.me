@@ -8,166 +8,9 @@
     <meta property="og:title" content="Lotus Lien"/>
     <link rel="image_src" href="http://i.imgur.com/PuHCf5j.png"/>
 
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script type="text/javascript" src="https://raw.githubusercontent.com/lotuslien/lotoloto.me/gh-pages/ll2015/loader.js"></script>
-	<script type="text/javascript">
-
-
-$(window).ready(function(){
-	$('#images img').fadeTo(0,0);
-});
-
-// execute this function as soon as the window is done loading
-$(window).load(function(){
-
-	// The currently chosen image
-	var chosenImage = 0;
-
-	// Just a helper function to generate random numbers
-	randomNum = function(range){
-		return  Math.floor(Math.random() * range);
-	}
-
-	// fill the '#images' div with divs. in this case, 15
-
-	for(var i=0; i<15; i++){
-		$('#images').append('<div>');
-	}
-
-	function createImages(){
-		$('#images img').each(function(){
-
-			// attr = change attribute. data-name = data attribute for your choice.
-			// Store the original size in the html tag
-			$(this).attr('data-height', $(this).height());
-			$(this).attr('data-width', $(this).width());
-			// Store the current scale
-			$(this).attr('data-scale', 1);
-			// Display the original size
-			$(this).text($(this).width()+' x '+$(this).height());
-
-		});		
-	};
-
-	// Change the scale of an element.
-
-	function changeScale(element, scale){
-		element = $(element);
-		element.attr('data-scale', scale);
-		element.width(scale*element.attr('data-width'));
-		element.height(scale*element.attr('data-height'));
-		return element;
-	}
-
-	createImages();
-
-	var stopPositions = [];
-
-	// Make the images transparent before they are positioned.
-	$('#images img').stop().fadeTo(0,0);
-
-	function positionImages(){
-		// an array that holds the positions of the stops
-		stopPositions = [];
-
-		// goes over each image, sets it's size, and arranges the images from the left to the right.
-		// the counter for the position from left of the images
-		var leftPos =0;
-
-		$('#images div').each(function(){
-			stopPositions.push(leftPos);
-			$(this).css('left', leftPos);
-			leftPos += $(this).outerWidth()+24;
-		});
-
-		// *** fade in after positioning
-		$('#images img').stop().fadeTo(300,1);
-	};
-
-
-	function resizeImages(){
-		// Find the tallest image
-		var maxImageHeight = 0;
-		$('#images img').each(function(){
-			if ($(this).attr('data-height')>maxImageHeight) {
-				maxImageHeight = $(this).attr('data-height');
-			}
-		});
-		// If it is too tall:
-		if (maxImageHeight+180 > $(window).height()){
-			var wantedHeight = $(window).height()-230;
-			// calculate the wanted scale:
-			var wantedScale = wantedHeight/maxImageHeight;
-			wantedScale = Math.min(wantedScale,1);
-			// change scale for all images:
-			$('#images img').each(function(){
-				changeScale(this, wantedScale);
-			});
-		// if it is not too tall just set the scale to 1 for all images:
-		} else {
-			$('#images img').each(function(){
-				changeScale(this, 1);
-			});			
-		}
-	}
-	
-resizeImages();
-	positionImages();
-
-	// Show the window height and current scale in the #info div:
-
-	function showInfo(){
-		$('#info').html('');
-		$('#info').append('window height: ');
-		$('#info').append($(window).height());
-		$('#info').append(' // scale: ');
-		// round it to two decimals:
-		var scale = $('#images img').eq(0).attr('data-scale');
-		scale *= 100;
-		scale = Math.round(scale)/ 100;
-		$('#info').append(scale);
-	}
-
-	showInfo();
-
-	// this function happens when the window resizes:
-	$(window).resize(function(){
-		resizeImages();
-		positionImages();
-		showInfo();
-	});
-
-
-	// a click function - what happens when clicking the right button
-
-	$('#rightcontrol').click(function(){
-		// if it is not the rightmost image
-		if ($('#images img').length>chosenImage){
-			// animates the image to the correct location
-			$('#images').animate({
-				'left': -stopPositions[chosenImage+1]
-			},200);
-			// changes the variable that holds the chosen image
-			chosenImage +=1;
-		}
-	});
-
-	// same for the left button.
-
-	$('#leftcontrol').click(function(){
-		if (0<chosenImage){
-			$('#images').animate({
-				'left': -stopPositions[chosenImage-1]
-			},200);
-			chosenImage -=1;
-		}
-	});
-
-})
-
-</script>
-
-
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://raw.githubusercontent.com/lotuslien/lotoloto.me/gh-pages/ll2015/loader.js"></script>
+    <script type="text/javascript" src="https://raw.githubusercontent.com/lotuslien/lotoloto.me/gh-pages/resize.js"></script>
 
 </head>
 <body>
@@ -179,22 +22,23 @@ resizeImages();
 		<span class="menu"><br>
 				<a href="facebook.com">facebook</a> | <a href="twitter.com/lotuslien_">twitter</a>
 				<span class="mail">lyl.lotus@gmail.com</span>
-
-		</span><br><br>
-
+		</span>
 	</div>
+	
 	<div id="sub-menu" class="sub-menu">
 		<ul>		
-			<li><span class="year">2013 &nbsp;</span><a class="text" href="http://www.naamaarad.com/africa-israel/">Africa Israel</li></a><li><span class="year">2012 &nbsp;</span><a class="text" href="http://www.naamaarad.com/elal/">EL AL</li></a><li><span class="year">2010 &nbsp;</span><a class="text" href="http://www.naamaarad.com/graduation/">Graduation Exhibition</li></a><li><span class="year">2008 &nbsp;</span><a class="text" href="http://www.naamaarad.com/first-house/">First House</li></a>	
-	</ul>
-	
-	
+	        <li><span class="year">2013 &nbsp;</span><a class="text" href="http://www.naamaarad.com/africa-israel/">Africa Israel</li></a>
+	        <li><span class="year">2012 &nbsp;</span><a class="text" href="http://www.naamaarad.com/elal/">EL AL</li></a>
+	        <li><span class="year">2010 &nbsp;</span><a class="text" href="http://www.naamaarad.com/graduation/">Graduation Exhibition</li></a>
+	        <li><span class="year">2008 &nbsp;</span><a class="text" href="http://www.naamaarad.com/first-house/">First House</li></a>	
+	 	</ul>
 	</div>
-<div id="credits">
-<span class="credit">Lotus is a blah blah <br> </span>
-	<button id="facebook">Share on Facebook</button> 
-	<button id="twitter">Share on Twitter</button>
-</div>
+	
+	<div id="credits">
+		<span class="credit">Lotus is a blah blah <br> </span>
+		<button id="facebook">Share on Facebook</button> 
+		<button id="twitter">Share on Twitter</button>
+	</div>
 		
 			<div id="controllers">
 			<div id="leftcontrol"></div>
@@ -208,17 +52,26 @@ resizeImages();
 <div id="images">
 <div id="ptitle">
 
-<p><span class="year">2015</span></p>
-<p><span class="title">Projects</span><br />
- <span class="gallery">Placeholder</span><br />
-<span class="gallery">Placeholder<br />
-- </span><br />
-<span class="gallery">Placeholder</span></p>
+<p>	
+	<span class="year">2015</span>
+</p>
+<p>	
+	<span class="title">Projects</span>
+ 	<span class="gallery">Placeholder</span>
+	<span class="gallery">Placeholder</span> 
+</p>
+
 </div>
 
 
-<div><a href="http://www.naamaarad.com/wp-content/uploads/2012/07/elalnew-00.jpg" target="_blank"><img width="693" height="500" src="http://www.naamaarad.com/wp-content/uploads/2012/07/elalnew-00-693x500.jpg" class="attachment-large" alt="Shredded Xerox Prints, Tape, 355x391" title="elalnew-00" /></a><br><span class="caption">Shredded Xerox Prints, Tape, 355x391 
-</span></div><div><a href="http://www.naamaarad.com/wp-content/uploads/2012/07/elalnew-01.jpg" target="_blank"><img width="749" height="500" src="http://www.naamaarad.com/wp-content/uploads/2012/07/elalnew-01-749x500.jpg" class="attachment-large" alt="elalnew-01" title="elalnew-01" /></a><br><span class="caption"> 
+<div>
+<a href="http://www.naamaarad.com/wp-content/uploads/2012/07/elalnew-00.jpg" target="_blank">
+	<img width="693" height="500" src="http://www.naamaarad.com/wp-content/uploads/2012/07/elalnew-00-693x500.jpg" class="attachment-large" alt="Shredded Xerox Prints, Tape, 355x391" title="elalnew-00" /></a><br>
+	<span class="caption">Shredded Xerox Prints, Tape, 355x391 
+	</span>
+</div>
+
+<div><a href="http://www.naamaarad.com/wp-content/uploads/2012/07/elalnew-01.jpg" target="_blank"><img width="749" height="500" src="http://www.naamaarad.com/wp-content/uploads/2012/07/elalnew-01-749x500.jpg" class="attachment-large" alt="elalnew-01" title="elalnew-01" /></a><br><span class="caption"> 
 </span></div><div><a href="http://www.naamaarad.com/wp-content/uploads/2012/07/elalnew-02.jpg" target="_blank"><img width="750" height="500" src="http://www.naamaarad.com/wp-content/uploads/2012/07/elalnew-02-750x500.jpg" class="attachment-large" alt="A3 Xerox Prints, Tape, 191x92" title="elalnew-02" /></a><br><span class="caption">A3 Xerox Prints, Tape, 191x92 
 </span></div><div><a href="http://www.naamaarad.com/wp-content/uploads/2012/07/elalnew-03.jpg" target="_blank"><img width="750" height="500" src="http://www.naamaarad.com/wp-content/uploads/2012/07/elalnew-03-750x500.jpg" class="attachment-large" alt="elalnew-03" title="elalnew-03" /></a><br><span class="caption"> 
 </span></div><div><a href="http://www.naamaarad.com/wp-content/uploads/2012/07/elalnew-04.jpg" target="_blank"><img width="750" height="500" src="http://www.naamaarad.com/wp-content/uploads/2012/07/elalnew-04-750x500.jpg" class="attachment-large" alt="Pencil on Paper, Magnets, 50x35 cm" title="elalnew-04" /></a><br><span class="caption">Pencil on Paper, Magnets, 50x35 cm 
