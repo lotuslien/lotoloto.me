@@ -14,12 +14,19 @@
   
     
     <script type="text/javascript"> 
+    
         var dataReference = new Firebase("http://8756438.firebaseio.com");
-        dataReference.on("child_added", function(){}); 
+        dataReference.on("child_added", function(snapshot){
+      
+          var list = document.getElementById("thingsList");
+          list.innerHTML += tmpl("thingListItem", snapshot.val());
+          
+        });
+        
     </script>
     
     <script type="text/html" id="thingListItem">
-      <li><%=thing%></li>
+      <li><%=thing%></li> <small><%=importance %></small>
     </script>
     
   </body>
