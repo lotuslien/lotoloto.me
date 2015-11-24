@@ -40,7 +40,7 @@ MX.Tableaux.Slogans = MX.Tableau.extend({
 
 		var images = [
 			'http://citizenkade.com/wp-content/uploads/2012/06/scribble.png',
-			'http://www.theshineagency.com/wp-content/uploads/2014/06/circle-scribble.png',
+			'http://citizenkade.com/wp-content/uploads/2012/06/scribble.png',
 			'http://citizenkade.com/wp-content/uploads/2012/06/scribble.png',
 			'http://citizenkade.com/wp-content/uploads/2012/06/scribble.png',
 			'http://citizenkade.com/wp-content/uploads/2012/06/scribble.png'
