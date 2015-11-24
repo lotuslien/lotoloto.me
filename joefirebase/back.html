@@ -3,6 +3,7 @@
 <html>
 <head>
   <title>title</title>
+  <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
 </head>
 
   <body>
@@ -11,7 +12,12 @@
   
     <input type="text" name="thing" id="thing" />
     <input type="submit" value="send" name="submit" id="submit" />
-  
+    
+    <script type="text/javascript"> 
+        var dataReference = new Firebase("http://8756438.firebaseio.com");
+        dataReference.push({thing:"wallet"});
+        
+    </script>
   </body>
 
 </html>
