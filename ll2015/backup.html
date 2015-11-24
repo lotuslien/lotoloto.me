@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta property="og:url" content="http://lotoloto.me/ll2015/index.html"/>
+
+
+	<link rel="stylesheet" type="text/css" href="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/ll2015/css.css">
+</head>
+<body>
+	<div id="bg"></div>
+	<div id="scene"></div>
+
+	<div id="info">
+			<section>
+				
+				<span style="width: 720px;line-height:18px; display:inline-block;margin:10px 0">
+				
+				</span>
+			<span class="learnmore">
+			</span>
+			
+			</section>
+		</div>
+	</div>
+
+	
+	<div id="bottom">
+		<button id="facebook">Share on Facebook</button>
+		<button id="twitter">Share on Twitter</button>
+
+	</div>
+	<div class="canvas" id="loader">
+		<div class="loadingText">Loading...</div>
+		<canvas resize="true" hidpi="off" id="canvas-1"></canvas>
+	</div>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/ll2015/tube.js"></script>
+	<script src="http://okfoc.us/kenzo/assets/javascripts/vendor/loader.js"></script>
+	<script src="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/ll2015/paper.js"></script>
+
+	<script src="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/ll2015/mx.js"></script>
+
+	<script src="http://okfoc.us/kenzo/assets/javascripts/mx/extensions/mx.scene.js"></script>
+	<script src="http://okfoc.us/kenzo/assets/javascripts/mx/extensions/mx.movements.js"></script>
+	<script src="https://raw.githubusercontent.com/lotuslien/lotoloto.me/gh-pages/ll2015/mx.scene.js"></script>
+	<script src="https://raw.githubusercontent.com/lotuslien/lotoloto.me/gh-pages/ll2015/mx.movements.js"></script>
+ 	<script src="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/ll2015/mx.scrubber.js"></script>
+ 
+ 	<script src="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/ll2015/mx.box.js"></script>
+ 	<script src="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/ll2015/mx.scaleBox.js"></script>
+ 	<script src="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/ll2015/mx.boxDimensions.js"></script>
+	<script src="http://okfoc.us/kenzo/assets/javascripts/mx/primitives/mx.image.js"></script>
+	<script src="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/ll2015/mx.cutout.js"></script>
+	<script src="http://okfoc.us/kenzo/assets/javascripts/mx/primitives/mx.text.js"></script>
+	<script src="http://okfoc.us/kenzo/assets/javascripts/mx/primitives/mx.tableau.js"></script>
+	<script src="https://raw.com/lotuslien/lotoloto.me/gh-pages/ll2015/mx.image.js"></script>
+	<script src="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/ll2015/mx.cutout.js"></script>
+	<script src="https://raw.githubusercontent.com/lotuslien/lotoloto.me/gh-pages/ll2015/mx.text.js"></script>
+	<script src="https://raw.githubusercontent.com/lotuslien/lotoloto.me/gh-pages/ll2015/mx.tableau.js"></script>
+
+
+	<script src="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/ll2015/fish_cutouts.js"></script>
+	<script src="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/ll2015/fish.js"></script>
+	<script src="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/ll2015/floor.js"></script>
+	<script src="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/ll2015/intro_text.js"></script>
+	<script src="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/ll2015/models.js"></script>
+	<script src="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/ll2015/water_box.js"></script>
+	<script src="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/ll2015/waves.js"></script>
+	<script src="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/ll2015/slogans.js"></script>
+	<script src="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/ll2015/app2.js"></script>
+	<script src="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/ll2015/path.js"></script>
+	<script src="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/ll2015/app3.js"></script>
+	<script src="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/ll2015/util.js"></script>
+
+	<script type="text/paperscript" canvas="canvas-1">
+		app.init();
+		// Code ported to Paper.js from http://the389.com/9/1/
+		// with permission.
+
+		var values = {
+			friction: 0.8,
+			timeStep: 0.01,
+			amount: 15,
+			mass: 2,
+			count: 0
+		};
+		values.invMass = 1 / values.mass;
+
+		var path, springs;
+		var size = view.size * [1.2, 1];
+
+		var Spring = function(a, b, strength, restLength) {
+			this.a = a;
+			this.b = b;
+			this.restLength = restLength || 80;
+			this.strength = strength ? strength : 0.55;
+			this.mamb = values.invMass * values.invMass;
+		};
+
+		Spring.prototype.update = function() {
+			var delta = this.b - this.a;
+			var dist = delta.length;
+			var normDistStrength = (dist - this.restLength) /
+					(dist * this.mamb) * this.strength;
+			delta.y *= normDistStrength * values.invMass * 0.2;
+			if (!this.a.fixed)
+				this.a.y += delta.y;
+			if (!this.b.fixed)
+				this.b.y -= delta.y;
+		};
+
+
+		function createPath(strength) {
+			var path = new Path({
+				fillColor: '#000000'
+			});
+			springs = [];
+			for (var i = 0; i <= values.amount; i++) {
+				var segment = path.add(new Point(i / values.amount, 0.5) * size);
+				var point = segment.point;
+				if (i == 0 || i == values.amount)
+					point.y += size.height;
+				point.px = point.x;
+				point.py = point.y;
+				// The first two and last two points are fixed:
+				point.fixed = i < 2 || i > values.amount - 2;
+				if (i > 0) {
+					var spring = new Spring(segment.previous.point, point, strength);
+					springs.push(spring);
+				}
+			}
+			path.position.x -= size.width / 4;
+			return path;
+		}
+
+		function onResize() {
+			if (path)
+				path.remove();
+			size = view.bounds.size * [2, 1];
+			path = createPath(0.1);
+
+			var p = new paper.Point($(window).width() / 2, $(window).height() / 2);
+			var location = path.getNearestLocation(p);
+			var segment = location.segment;
+			var point = segment.point;
+
+			if (!point.fixed && location.distance < size.height / 4) {
+				var y = 400;
+				point.y += (y - point.y) / 6;
+				if (segment.previous && !segment.previous.fixed) {
+					var previous = segment.previous.point;
+					previous.y += (y - previous.y) / 24;
+				}
+				if (segment.next && !segment.next.fixed) {
+					var next = segment.next.point;
+					next.y += (y - next.y) / 24;
+				}
+			}
+		}
+
+		function onFrame(event) {
+			updateWave(path);
+		}
+
+		function onMouseMove(event) {
+			var location = path.getNearestLocation(event.point);
+			var segment = location.segment;
+			var point = segment.point;
+
+			if (!point.fixed && location.distance < size.height / 4) {
+				var y = event.point.y;
+				point.y += (y - point.y) / 6;
+				if (segment.previous && !segment.previous.fixed) {
+					var previous = segment.previous.point;
+					previous.y += (y - previous.y) / 24;
+				}
+				if (segment.next && !segment.next.fixed) {
+					var next = segment.next.point;
+					next.y += (y - next.y) / 24;
+				}
+			}
+		}
+
+		function updateWave(path) {
+			var force = 1 - values.friction * values.timeStep * values.timeStep;
+			for (var i = 0, l = path.segments.length; i < l; i++) {
+				var point = path.segments[i].point;
+				var dy = (point.y - point.py) * force;
+				point.py = point.y;
+				point.y = Math.max(point.y + dy, 0);
+			}
+
+			for (var j = 0, l = springs.length; j < l; j++) {
+				springs[j].update();
+			}
+			path.smooth();
+		}
+
+		function onKeyDown(event) {
+			if (event.key == 'space') {
+				path.fullySelected = !path.fullySelected;
+				path.fillColor = path.fullySelected ? null : 'black';
+			}
+		}
+	</script>
+
+</body>
+</html>
