@@ -10,7 +10,7 @@ environment.init = function(){
 		"y": 0,
 		"z": 0,
 		"rotationX": 0.085,
-		"rotationY": 0.025
+		"rotationY": 0.020
 	})
 	map && map.zoom(3.10) && map.recenter()
 
@@ -64,7 +64,7 @@ environment.init = function(){
 		gap: 1000,
 		z: 5000
 	})
-
+//fish pattern color overlay 
 	this.fishCutouts = new MX.Tableaux.FishCutouts({
 		fishCount: 10,
 		x: 0,
@@ -75,9 +75,9 @@ environment.init = function(){
 		zRange: 1500,
 		speed: -Math.PI / 600,
 		className: "fish",
-		patternSrc: "http://oi47.tinypic.com/2u8fhmx.jpg",
+		patternSrc: "http://okfocus.s3.amazonaws.com/kenso/underwater/bwrepeat2.png",
 	})
-
+//fish pattern color overlay 
 	this.fishCutouts2 = new MX.Tableaux.FishCutouts({
 		fishCount: 10,
 		x: 0,
@@ -88,7 +88,7 @@ environment.init = function(){
 		zRange: 3000,
 		speed: Math.PI / 400,
 		className: "fish",
-		patternSrc: "http://oi47.tinypic.com/2u8fhmx.jpg",
+		patternSrc: "http://okfocus.s3.amazonaws.com/kenso/underwater/bwrepeat2.png",
 	})
 
 	this.fishCutouts3 = new MX.Tableaux.FishCutouts({
@@ -115,7 +115,7 @@ environment.init = function(){
 		x: 0,
 		y: 1000,
 		z: 13500,
-		padding: 30,
+		padding: 50,
 		scale: 10,
 	})
 
