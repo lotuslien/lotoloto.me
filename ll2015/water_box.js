@@ -21,7 +21,7 @@ MX.Tableaux.WaterBox = MX.Tableau.extend({
 			width: opt.width,  
 			height: opt.height,
 			depth: opt.depth,
-			backgroundImage: "https://cloud.githubusercontent.com/assets/8115609/11370532/35120106-9292-11e5-9920-231a7f9ee1ae.png",
+			backgroundImage: "http://www.transparenttextures.com/patterns/concrete-wall.png",
 			borderWidth: 0,
 			borderColor: "blue",
 			x: opt.x,
