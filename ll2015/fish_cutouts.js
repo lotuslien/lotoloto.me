@@ -20,7 +20,7 @@ MX.Tableaux.FishCutouts = MX.Tableau.extend({
 			dieSpeed: 1/60,
 			rotationRangeY: Math.PI/3,
 			rotationRangeX: Math.PI/5,
-			patternSrc: "http://okfocus.s3.amazonaws.com/kenso/underwater/bwrepeat2.png"
+			patternSrc: "http://www.transparenttextures.com/patterns/concrete-wall.png"
 		})
 	
 		var fish_base = 'http://okfocus.s3.amazonaws.com/kenso/underwater/'
