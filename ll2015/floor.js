@@ -13,7 +13,7 @@ MX.Tableaux.Floor = MX.Tableau.extend({
 			rotationY: 0,
 			rotationX: 0,
 			scale: 1,
-			color: "white",
+			color: "red",
 			backgroundColor: "transparent",
 			backgroundImage: null,
 			borderRadius: null,
