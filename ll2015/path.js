@@ -17,7 +17,7 @@ path.build = function(){
 	scrubber = new MX.Scrubber(cam, [
 		
 		{ // NFNN
-			"x": 147,
+			"x": 600,
 			"y": 1548,
 			"z": -4053,
 			"rotationX": 0.085,
