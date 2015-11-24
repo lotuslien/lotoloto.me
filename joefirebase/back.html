@@ -9,13 +9,26 @@
   <body>
 
   <h1>send me important things!</h1>
-  
+  <label name="thing">thing</label>
+  <label name"importance">importance</label>
     <input type="text" name="thing" id="thing" />
     <input type="submit" value="send" name="submit" id="submit" />
     
     <script type="text/javascript"> 
         var dataReference = new Firebase("http://8756438.firebaseio.com");
-        dataReference.push({thing:"wallet"});
+        var submit = document.getElementById("submit");
+        submit.addEventListener("click", function(){});
+          var text = document.getElementById("thing");
+          var importance = document.getElementById("importance");
+          
+          dataReference.push({
+            thing:text.value,
+            importance: importance.value
+          });
+          
+          text.value
+        
+        // datareference.push({thing:"wallet"});
         
     </script>
   </body>
