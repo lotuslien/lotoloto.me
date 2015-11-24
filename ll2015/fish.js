@@ -36,7 +36,7 @@ MX.Tableaux.Fish = MX.Tableau.extend({
 			
 			
 			fish = new MX.Image({
-				src: "none yet",
+				src: "https://cloud.githubusercontent.com/assets/8115609/11075190/f7261a42-87c1-11e5-99ba-094a7b86714c.gif",
 				x: x + opt.x,
 				y: y + opt.y,
 				z: z + opt.z,
