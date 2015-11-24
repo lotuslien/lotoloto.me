@@ -65,7 +65,7 @@ if (is_mobile) {
 	window.location.href = "mobile.html"
 }
 else if ($.browser.msie || ! has3d()) {
-	window.location.href = "https://www.kenzo.com/en/blog/tag/no-fish-no-nothing_1298/"
+	window.location.href = "https://lotoloto.me/ll2015/index.html"
 }
 
 var scene,
