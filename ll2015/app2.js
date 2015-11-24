@@ -44,7 +44,7 @@ environment.init = function(){
 		y: 150,
 		z: 5000,
 		rotationX: -PI/20,
-		backgroundImage: "http://okfocus.s3.amazonaws.com/kenso/underwater/bwrepeat2.png"
+		backgroundImage: "https://cloud.githubusercontent.com/assets/8115609/11370532/35120106-9292-11e5-9920-231a7f9ee1ae.png"
 	})
 
 	var intro = new MX.Tableaux.IntroText({
@@ -101,7 +101,7 @@ environment.init = function(){
 		zRange: 2000,
 		speed: -Math.PI / 500,
 		className: "fish",
-		patternSrc: "http://oi47.tinypic.com/2u8fhmx.jpg",
+		patternSrc: "http://okfocus.s3.amazonaws.com/kenso/underwater/bwrepeat2.png",
 	})
 
 
