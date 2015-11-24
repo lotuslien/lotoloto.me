@@ -3,7 +3,7 @@ MX.Tableaux.WaterBox = MX.Tableau.extend({
 	init: function(opt){
 	
 		opt = defaults(opt, {
-			width: 500,
+			width: 600,
 			height: 200,
 			depth: 200,
 			x: 240,
@@ -21,7 +21,7 @@ MX.Tableaux.WaterBox = MX.Tableau.extend({
 			width: opt.width,  
 			height: opt.height,
 			depth: opt.depth,
-			backgroundImage: "http://38.media.tumblr.com/tumblr_lx7cdufXDf1qzu8e8o1_400.gif",
+			backgroundImage: "https://cloud.githubusercontent.com/assets/8115609/11370532/35120106-9292-11e5-9920-231a7f9ee1ae.png",
 			borderWidth: 0,
 			borderColor: "blue",
 			x: opt.x,
