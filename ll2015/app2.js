@@ -44,7 +44,7 @@ environment.init = function(){
 		y: 150,
 		z: 5000,
 		rotationX: -PI/20,
-		backgroundImage: "http://dumpfm.s3.amazonaws.com/images/20120209/1328764462143-dumpfm-qil-water3b.gif"
+		backgroundImage: "http://okfocus.s3.amazonaws.com/kenso/underwater/bwrepeat2.png"
 	})
 
 	var intro = new MX.Tableaux.IntroText({
