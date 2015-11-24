@@ -17,7 +17,7 @@ path.build = function(){
 	scrubber = new MX.Scrubber(cam, [
 		
 		{ // NFNN
-			"x": 600,
+			"x": 147,
 			"y": 1548,
 			"z": -4053,
 			"rotationX": 0.085,
@@ -64,6 +64,15 @@ path.build = function(){
 		
 		{ // POST WHAT MODELS LOOK LIKE
 			"x": -59,
+			"y": 0,
+			"z": 4000,
+			"rotationX": -0.506,
+			"rotationY": -0.308,
+			"name": "whatmodelslooklike"
+		},
+		
+			{ // POST WHAT MODELS LOOK LIKE
+			"x": 59,
 			"y": 0,
 			"z": 4000,
 			"rotationX": -0.506,
