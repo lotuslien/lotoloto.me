@@ -9,11 +9,14 @@
 <link href="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/haituscss.css" 
       rel="stylesheet" 
       type="text/css" />
+   
 	
 </head>
 
 <body background="https://cloud.githubusercontent.com/assets/8115609/11438705/a221462e-94c4-11e5-89d7-12f5bc25dff3.png">
-<div id="botones">
+ <canvas id="test" width="500" height="500">
+ 	
+	<div id="botones">
 	<a href="http://lotoloto.me/">Lotus Lien</a>
 	 &#8212;
 	<a href="http://lotoloto.me/notes.html">notes</a>
@@ -21,6 +24,47 @@
 	<a href="http://lotoloto.me/about.html">about</a>  
 	<br><BR>
 	<h1>brb</h1>
+</canvas>
+
+    <button id="undo">Undo</button>
+    <button id="redo">Redo</button>
+    <button id="eraser">Eraser</button>
+    <button id="pencil">Pencil</button>
+    <button id="console">Export JSON to console</button>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/fidel/dist/fidel.min.js"></script>
+    <script src="../dist/scribble.js"></script>      
+<script>
+      (function(){
+        var scribble = $('#test').scribble(),
+            scribbleFidel = $('#test').data('scribble');
+        $('#undo').on('click',function(e){
+          e.preventDefault();
+          scribbleFidel.undo();
+        });
+        $('#redo').on('click',function(e){
+          e.preventDefault();
+          scribbleFidel.redo();
+        });
+        $('#eraser').on('click',function(e){
+          e.preventDefault();
+          scribbleFidel.changeTool('eraser');
+        });
+        $('#pencil').on('click',function(e){
+          e.preventDefault();
+          scribbleFidel.changeTool('pencil');
+        });
+        $('#console').on('click',function(e){
+          e.preventDefault();
+          console.log(scribbleFidel.toJSON());
+          console.log(JSON.stringify(scribbleFidel.toJSON()));
+        });
+        scribble.on('drawing.changed',function(e){
+          console.log('Drawing has been changed');
+        });
+      })()
+    </script>	
+	
 
 </body>
 </html>
