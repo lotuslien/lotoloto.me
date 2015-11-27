@@ -32,6 +32,8 @@ margin-bottom: 25px;
 .social
 {
 color: grey;
+text-transform: lowercase; 
+
 }
 
 .social a:hover
