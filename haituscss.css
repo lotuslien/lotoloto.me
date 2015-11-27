@@ -65,6 +65,11 @@ font-weight: normal;
 padding-left: 40px;
 }
 
+.social
+{
+color: grey;
+}
+
 .credits, .credits *
 {
 display: inline;
@@ -72,8 +77,6 @@ line-height: 0;
 color: #ddd;
 letter-spacing: 0em;
 }
-
-
 
 .submenu
 {
