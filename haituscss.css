@@ -28,6 +28,17 @@ background: #000;
 display: block;
 margin-bottom: 25px;
 }
+
+.social
+{
+color: grey;
+}
+
+.social a:hover
+{
+opacity: .7;
+}
+
 .botones
 {
 display: block;
@@ -65,10 +76,6 @@ font-weight: normal;
 padding-left: 40px;
 }
 
-.social
-{
-color: grey;
-}
 
 .credits, .credits *
 {
