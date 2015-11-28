@@ -29,9 +29,13 @@ display: block;
 margin-bottom: 25px;
 }
 
-.social
+social
 {
 color: grey;
+margin-left: 25px;
+color: #000;
+background-color:#fff;
+font-family: Arial, Helvetica, sans-serif;
 text-transform: lowercase; 
 
 }
