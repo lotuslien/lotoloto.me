@@ -29,8 +29,6 @@ display: block;
 margin-bottom: 25px;
 }
 
-
-
 .botones
 {
 display: block;
@@ -63,7 +61,6 @@ text-decoration: none;
 border-bottom: none;
 }
 
-
 h1
 {
 z-index: -1;
@@ -72,7 +69,6 @@ text-transform: uppercase;
 font-size: 400px;
 line-height: 320px;
 letter-spacing: -0.07em;
-
 }
 
 h2
@@ -80,7 +76,6 @@ h2
 font-weight: normal;
 padding-left: 40px;
 }
-
 
 .credits, .credits *
 {
