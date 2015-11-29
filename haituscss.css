@@ -45,8 +45,7 @@ outline: none;
 
 a:hover
 {
-border-bottom: 3px solid;
-border-bottom-color: #FFA500;
+border-bottom: 3px solid #FFA500;
 }
 
 .social
