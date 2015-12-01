@@ -1,0 +1,52 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+}
+
+canvas {
+  cursor: none;
+}
+
+.timeline {
+  position: absolute;
+
+  height: 1px;
+  background-color: white;
+
+  bottom: 84px;
+}
+
+.wayne-marker {
+  position: absolute;
+}
+
+.wayne-marker img {
+
+}
+
+.ender {
+  display: none;
+
+  font-family: monospace;
+  font-size: 120px;
+
+  text-align: center;
+  color: red;
+
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  left: 0;
+  top: 35%;
+}
+
+.ender a {
+  color: red;
+  text-decoration: none;
+}
