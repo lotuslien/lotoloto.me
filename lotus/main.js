@@ -26,7 +26,7 @@ loader.onStart = function() {
 
 function init() {
   var numLotus
-  var stream = new Stream('audio/splendor.mp3', audioController);
+  var stream = new Stream('a.tumblr.com/tumblr_n8iqhvPQln1rmsbngo1.mp3', audioController);
   stream.play();
   clock = new THREE.Clock();
   scene = new THREE.Scene();
