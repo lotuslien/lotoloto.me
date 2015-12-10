@@ -89,8 +89,8 @@ function animate() {
 
 var TEXTURES = {};
 var normals = [];
-loadTexture('moss', 'assets/normals/sand.png', normals)
-loadTexture('flower', 'assets/normals/other.jpg', normals)
+loadTexture('moss', 'https://cloud.githubusercontent.com/assets/8115609/11728632/eb1922d6-9f58-11e5-8577-8da39909c278.jpg', normals)
+loadTexture('flower', 'https://cloud.githubusercontent.com/assets/8115609/11728635/ee33296c-9f58-11e5-92ce-20923fcaec98.jpg', normals)
 
 var shaders = new ShaderLoader('shaders');
 
