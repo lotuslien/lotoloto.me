@@ -100,13 +100,13 @@ function createScene()
 	var planeMaterial =
 	  new THREE.MeshLambertMaterial(
 		{
-		  color: 0x4BD121
+		  color: 0xFF4045
 		});
 	// create the table's material
 	var tableMaterial =
 	  new THREE.MeshLambertMaterial(
 		{
-		  color: 0x111111
+		  color: 0xFF4045
 		});
 	// create the pillar's material
 	var pillarMaterial =
