@@ -95,8 +95,8 @@ function createScene()
 		  specular: 0x009900, 
 		  shininess: 30, 
 		  vertexColors: 0xFF4045,
-		  envMap: reflection, 
-		  shading: THREE.FlatShading
+		  envMap: reflection
+		  
 		  
 		});
 	// create the paddle2's material
@@ -108,8 +108,7 @@ function createScene()
 		  specular: 0x009900, 
 		  shininess: 30, 
 		  vertexColors: 0xFF4045,
-		  envMap: reflection, 
-		  shading: THREE.FlatShading
+		  envMap: reflection
 		});
 	// create the plane's material	
 	var planeMaterial =
