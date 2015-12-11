@@ -18,7 +18,7 @@ var score1 = 0, score2 = 0;
 var maxScore = 7;
 
 // set opponent reflexes (0 - easiest, 1 - hardest)
-var difficulty = 0.2;
+var difficulty = 0.9;
 
 // ------------------------------------- //
 // ------- GAME FUNCTIONS -------------- //
