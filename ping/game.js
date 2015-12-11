@@ -153,7 +153,7 @@ function createScene()
 		
 	// // set up the sphere vars
 	// lower 'segment' and 'ring' values will increase performance
-	var radius = 5,
+	var radius = 20,
 		segments = 6,
 		rings = 6;
 		
@@ -239,9 +239,9 @@ function createScene()
 		var backdrop = new THREE.Mesh(
 		
 		  new THREE.CubeGeometry( 
-		  30, 
-		  30, 
-		  300, 
+		  20, 
+		  50, 
+		  100, 
 		  1, 
 		  1,
 		  1 ),
@@ -283,7 +283,7 @@ function createScene()
 	// to show off pretty shadows
 	var ground = new THREE.Mesh(
 
-	  new THREE.CubeGeometry( 
+	  new THREE.BallGeometry( 
 	  1000, 
 	  1000, 
 	  3, 
