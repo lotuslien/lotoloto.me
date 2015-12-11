@@ -88,9 +88,9 @@ function createScene()
 		
 	// create the paddle1's material
 	var paddle1Material =
-	  new THREE.MeshLambertMaterial(
+	  new THREE.MeshPhongMaterial(
 		{
-		  color: 0x1B32C0
+		  color: 0x7a3131
 		  emissive: 0x207faf
 		  specular: 0x009900, 
 		  shininess: 30, 
