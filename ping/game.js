@@ -202,6 +202,59 @@ function createScene()
 
 	  paddle1Material);
 
+		
+	// create the playing surface plane
+	var plane = new THREE.Mesh(
+
+	  new THREE.PlaneGeometry(
+		planeWidth * 0.95,	// 95% of table width, since we want to show where the ball goes out-of-bounds
+		planeHeight,
+		planeQuality,
+		planeQuality),
+
+	  planeMaterial);
+	  
+	scene.add(plane);
+	plane.receiveShadow = true;	
+	
+	var table = new THREE.Mesh(
+
+	  new THREE.CubeGeometry(
+		planeWidth * 1.05,	// this creates the feel of a billiards table, with a lining
+		planeHeight * 1.03,
+		100,				// an arbitrary depth, the camera can't see much of it anyway
+		planeQuality,
+		planeQuality,
+		1),
+
+	  tableMaterial);
+	table.position.z = -51;	// we sink the table into the ground by 50 units. The extra 1 is so the plane can be seen
+	scene.add(table);
+	table.receiveShadow = true;	
+		
+	// // set up the sphere vars
+	// lower 'segment' and 'ring' values will increase performance
+	var radius = 5,
+		segments = 6,
+		rings = 6;
+		
+	// // create the sphere's material
+	var sphereMaterial =
+	  new THREE.MeshLambertMaterial(
+		{
+		  color: 0xD43001
+		});
+		
+	// Create a ball with sphere geometry
+	ball = new THREE.Mesh(
+
+	  new THREE.SphereGeometry(
+		radius,
+		segments,
+		rings),
+
+	  sphereMaterial);
+
 	// // add the sphere to the scene
 	scene.add(paddle1);
 	paddle1.receiveShadow = true;
@@ -239,9 +292,9 @@ function createScene()
 		var backdrop = new THREE.Mesh(
 		
 		  new THREE.CubeGeometry( 
-		  20, 
-		  50, 
-		  100, 
+		  30, 
+		  30, 
+		  300, 
 		  1, 
 		  1,
 		  1 ),
@@ -283,7 +336,7 @@ function createScene()
 	// to show off pretty shadows
 	var ground = new THREE.Mesh(
 
-	  new THREE.BallGeometry( 
+	  new THREE.CubeGeometry( 
 	  1000, 
 	  1000, 
 	  3, 
@@ -321,7 +374,6 @@ function createScene()
 	// MAGIC SHADOW CREATOR DELUXE EDITION with Lights PackTM DLC
 	renderer.shadowMapEnabled = true;		
 }
-
 function draw()
 {	
 	// draw THREE.JS scene
