@@ -45,8 +45,8 @@ function setup()
 function createScene()
 {
 	// set the scene size
-	var WIDTH = 640,
-	  HEIGHT = 360;
+	var WIDTH = 800,
+	  HEIGHT = 500;
 
 	// set some camera attributes
 	var VIEW_ANGLE = 50,
@@ -73,7 +73,7 @@ function createScene()
 	
 	// set a default position for the camera
 	// not doing this somehow messes up shadow rendering
-	camera.position.z = 320;
+	camera.position.z = 200;
 	
 	// start the renderer
 	renderer.setSize(WIDTH, HEIGHT);
