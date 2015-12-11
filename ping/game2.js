@@ -114,7 +114,10 @@ function createScene()
 	var pillarMaterial =
 	  new THREE.MeshLambertMaterial(
 		{
-		  color: 0x534d0d
+		  color: 0x534d0d,
+		  specular: 0x009900, 
+		  shininess: 30, 
+		  shading: THREE.FlatShading
 		});
 	// create the ground's material
 	var groundMaterial =
