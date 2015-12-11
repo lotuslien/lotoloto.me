@@ -1,13 +1,4 @@
 
-// --------------------------------------------- //
-// ------- 3D PONG built with Three.JS --------- //
-// -------- Created by Nikhil Suresh ----------- //
-// -------- Three.JS is by Mr. doob  ----------- //
-// --------------------------------------------- //
-
-// ------------------------------------- //
-// ------- GLOBAL VARIABLES ------------ //
-// ------------------------------------- //
 
 // scene object variables
 var renderer, scene, camera, pointLight, spotLight;
