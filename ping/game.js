@@ -1,14 +1,3 @@
-
-// --------------------------------------------- //
-// ------- 3D PONG built with Three.JS --------- //
-// -------- Created by Nikhil Suresh ----------- //
-// -------- Three.JS is by Mr. doob  ----------- //
-// --------------------------------------------- //
-
-// ------------------------------------- //
-// ------- GLOBAL VARIABLES ------------ //
-// ------------------------------------- //
-
 // scene object variables
 var renderer, scene, camera, pointLight, spotLight;
 
@@ -54,8 +43,8 @@ function setup()
 function createScene()
 {
 	// set the scene size
-	var WIDTH = 640,
-	  HEIGHT = 360;
+	var WIDTH = 900,
+	  HEIGHT = 900;
 
 	// set some camera attributes
 	var VIEW_ANGLE = 50,
