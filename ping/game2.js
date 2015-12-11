@@ -45,8 +45,8 @@ function setup()
 function createScene()
 {
 	// set the scene size
-	var WIDTH = 800,
-	  HEIGHT = 500;
+	var WIDTH = 1000,
+	  HEIGHT = 600;
 
 	// set some camera attributes
 	var VIEW_ANGLE = 50,
@@ -91,10 +91,14 @@ function createScene()
 	  new THREE.MeshLambertMaterial(
 		{
 		  color: 0x1B32C0
+		  emissive: 0x207faf
+		  specular: 0x009900, 
+		  shininess: 30, 
+		  shading: THREE.FlatShading
 		});
 	// create the paddle2's material
 	var paddle2Material =
-	  new THREE.MeshLambertMaterial(
+	  new THREE.MeshPhongMaterial(
 		{
 		  color: 0xFF4045
 		});
