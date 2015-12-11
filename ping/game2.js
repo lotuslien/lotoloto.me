@@ -73,7 +73,7 @@ function createScene()
 	
 	// set a default position for the camera
 	// not doing this somehow messes up shadow rendering
-	camera.position.z = 200;
+	camera.position.z = 250;
 	
 	// start the renderer
 	renderer.setSize(WIDTH, HEIGHT);
@@ -92,11 +92,6 @@ function createScene()
 		{
 		  color: 0x7a3131,
 		  emissive: 0x207faf,
-		  specular: 0x009900, 
-		  shininess: 30, 
-		  vertexColors: 0xFF4045,
-		  envMap: reflection
-		  
 		  
 		});
 	// create the paddle2's material
@@ -105,10 +100,6 @@ function createScene()
 		{
 		  color: 0x7a3131,
 		  emissive: 0x207faf,
-		  specular: 0x009900, 
-		  shininess: 30, 
-		  vertexColors: 0xFF4045,
-		  envMap: reflection
 		});
 	// create the plane's material	
 	var planeMaterial =
