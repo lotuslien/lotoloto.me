@@ -153,7 +153,7 @@ function createScene()
 		
 	// // set up the sphere vars
 	// lower 'segment' and 'ring' values will increase performance
-	var radius = 20,
+	var radius = 5,
 		segments = 6,
 		rings = 6;
 		
