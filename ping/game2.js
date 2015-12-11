@@ -95,6 +95,7 @@ function createScene()
 		  specular: 0x009900, 
 		  shininess: 30, 
 		  vertexColors: 0xFF4045,
+		  envMap: reflection, 
 		  shading: THREE.FlatShading
 		  
 		});
@@ -107,6 +108,7 @@ function createScene()
 		  specular: 0x009900, 
 		  shininess: 30, 
 		  vertexColors: 0xFF4045,
+		  envMap: reflection, 
 		  shading: THREE.FlatShading
 		});
 	// create the plane's material	
