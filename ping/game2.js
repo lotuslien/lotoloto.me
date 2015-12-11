@@ -90,17 +90,24 @@ function createScene()
 	var paddle1Material =
 	  new THREE.MeshPhongMaterial(
 		{
-		  color: 0x7a3131
-		  emissive: 0x207faf
+		  color: 0x7a3131,
+		  emissive: 0x207faf,
 		  specular: 0x009900, 
 		  shininess: 30, 
+		  vertexColors: 0xFF4045,
 		  shading: THREE.FlatShading
+		  
 		});
 	// create the paddle2's material
 	var paddle2Material =
 	  new THREE.MeshPhongMaterial(
 		{
-		  color: 0xFF4045
+		  color: 0x7a3131,
+		  emissive: 0x207faf,
+		  specular: 0x009900, 
+		  shininess: 30, 
+		  vertexColors: 0xFF4045,
+		  shading: THREE.FlatShading
 		});
 	// create the plane's material	
 	var planeMaterial =
