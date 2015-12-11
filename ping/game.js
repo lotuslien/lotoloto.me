@@ -43,8 +43,8 @@ function setup()
 function createScene()
 {
 	// set the scene size
-	var WIDTH = 900,
-	  HEIGHT = 900;
+	var WIDTH = 1000,
+	  HEIGHT = 700;
 
 	// set some camera attributes
 	var VIEW_ANGLE = 50,
