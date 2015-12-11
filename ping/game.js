@@ -2,7 +2,7 @@
 var renderer, scene, camera, pointLight, spotLight;
 
 // field variables
-var fieldWidth = 400, fieldHeight = 200;
+var fieldWidth = 300, fieldHeight = 200;
 
 // paddle variables
 var paddleWidth, paddleHeight, paddleDepth, paddleQuality;
