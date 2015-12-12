@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+	<link rel="stylesheet" href="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/buzz/css.css>
+
+	<link href="//fonts.googleapis.com/css?family=Source+Sans Pro:400,600" rel="stylesheet" type="text/css">
+
+	<script type="text/javascript" src="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/buzz/jquery-2.1.1.min.js"></script>
+
+	<script id="vs_common" type="x-shader/x-vertex" charset="UTF-8">
+precision mediump float;
+
+attribute vec2 aPosition;
+attribute vec2 aUv;
+
+varying vec2 vUv;
+
+void main(void) {
+	vUv = aUv;
+	gl_Position = vec4(aPosition, 0.0, 1.0);
+}
+	</script>
+
+	<script id="vs_draw" type="x-shader/x-vertex" charset="UTF-8">
+precision mediump float;
+
+const float UNIT = 10000.0;
+
+attribute float aIndex;
+attribute vec3 aColor;
+
+uniform sampler2D texture;
+uniform float size;
+
+uniform vec2 canvasSize;
+
+varying vec4 vColor;
+
+void main(void) {
+	vec2 uv = vec2((mod(aIndex, size) + 0.5) / size, (floor(aIndex / size) + 0.5) / size);
+	vec4 node = texture2D(texture, uv) * 2.0 - 1.0;
+	node.xy = node.xy * UNIT / canvasSize;
+
+	vColor = vec4(aColor, 0.9);
+	gl_Position = vec4(node.xy, 0.0, 1.0);
+	gl_PointSize = 1.0;
+}
+	</script>
+
+	<!-- fs -->
+	<script id="fs_setup" type="x-shader/x-fragment" charset="UTF-8">
+precision mediump float;
+
+const float UNIT = 10000.0;
+
+const float PI = 3.14159265359;
+
+float rand(vec2 p){
+    return fract(sin(dot(p ,vec2(12.9898,78.233))) * 43758.5453);
+}
+
+uniform float ran;
+uniform float size;
+
+varying vec2 vUv;
+
+void main(void){
+	float i = vUv.x * size + vUv.y;
+	float rad = i * PI;
+
+	float px = rand(vUv * ran * 2.0) * 2.0 - 1.0;
+	float py = rand(vUv * ran * 4.0) * 2.0 - 1.0;
+	px = px * 100.0 / UNIT * cos(rad);
+	py = py * 100.0 / UNIT * sin(rad);
+	px = px / 2.0 + 0.5;
+	py = py / 2.0 + 0.5;
+
+	float vx = rand(vUv * ran * 8.0) * 2.0 - 1.0;
+	float vy = rand(vUv * ran * 16.0) * 2.0 - 1.0;
+	vx = vx * 10.0 / UNIT * cos(rad);
+	vy = vy * 10.0 / UNIT * sin(rad);
+	vx = vx / 2.0 + 0.5;
+	vy = vy / 2.0 + 0.5;
+
+	gl_FragColor = vec4(px, py, vx, vy);
+}
+	</script>
+	<script id="fs_calc" type="x-shader/x-fragment" charset="UTF-8">
+precision mediump float;
+
+const float PI = 3.14159265359;
+const float UNIT = 10000.0;
+
+float rand(vec2 p){
+    return fract(sin(dot(p ,vec2(12.9898,78.233))) * 43758.5453);
+}
+vec2 rotate(vec2 vec, float rad) {
+    mat2 mat = mat2(
+    	cos(rad), -sin(rad),
+    	sin(rad), cos(rad)
+    );
+    return mat * vec;
+}
+
+uniform vec2 canvasSize;
+uniform sampler2D texture;
+uniform float ran;
+uniform vec2 mouse;
+uniform bool mouseDown;
+
+uniform bool isProp;
+uniform bool isInverse;
+
+uniform float maxSpeed;
+uniform float reduceSpeed;
+uniform float radius;
+uniform float strength;
+uniform float areaVariable;
+
+uniform float screw;
+uniform bool bothSides;
+uniform float screwVariable;
+
+varying vec2 vUv;
+
+void main(void) {
+
+	vec4 node = (texture2D(texture, vUv) * 2.0 - 1.0) * UNIT;
+
+	vec2 dxy = node.xy - mouse;
+	vec2 nxy = normalize(dxy);
+	float len = length(dxy);
+	float r = rand(vUv);
+	float area = (r * areaVariable + (1.0 - areaVariable)) * radius;
+
+	if (mouseDown && len < area) {
+		if (!isProp) {
+			len = area;
+		} else {
+			if (isInverse) len = area - len;
+		}
+
+		float sign = 1.0;
+		if (bothSides) {
+			if (mod(fract(r * UNIT), 2.0) > 0.5) sign = -1.0;
+		}
+		float rot = screw * sign * (r * screwVariable + (1.0 - screwVariable));
+		node.zw -= rotate(nxy * len * strength, rot);
+	}
+
+	len = length(node.zw);
+	if (len > maxSpeed) {
+		node.zw *= reduceSpeed;
+	}
+
+	node.xy += node.zw;
+	if (node.x > canvasSize.x) {
+		node.x = canvasSize.x;
+		node.z *= -1.0;
+	} else if (node.x < -canvasSize.x) {
+		node.x = -canvasSize.x;
+		node.z *= -1.0;
+	}
+	if (node.y > canvasSize.y) {
+		node.y = canvasSize.y;
+		node.w *= -1.0;
+	} else if (node.y < -canvasSize.y) {
+		node.y = -canvasSize.y;
+		node.w *= -1.0;
+	}
+
+	node = node / UNIT / 2.0 + 0.5;
+	gl_FragColor = node;
+}
+
+	</script>
+	<script id="fs_draw" type="x-shader/x-fragment" charset="UTF-8">
+precision mediump float;
+
+varying vec4 vColor;
+
+void main(void) {
+	gl_FragColor = vColor;
+}
+	</script>
+	<script id="fs_view" type="x-shader/x-fragment" charset="UTF-8">
+precision mediump float;
+
+uniform sampler2D texture;
+
+varying vec2 vUv;
+
+void main(void) {
+	gl_FragColor = texture2D(texture, vUv);
+}
+	</script>
+
+
+</head>
+<body>
+	<div id="container">
+		<script type="text/javascript" charset="UTF-8">$("#container").hide();</script>
+
+		<h1><a href="../">WEBGL BI<span class="ls40">T</span>S</a></h1>
+
+		<div id="not_supported">
+			<p>Your web browser <strong>is not supported.</strong><br />This content needs <strong>WebGL</strong> &amp;
+				<strong>JavaScript</strong>.</p>
+		</div>
+
+		<canvas id="wgl"></canvas>
+
+		<div id="navi">
+			<ul>
+				<li><button type="button"><span>Jack Durante / Endorphins [Monique Speciale]</span></button></li>
+				<li><button type="button"><span>Van Bonn / Reise Im Fjord [Traum]</span></button></li>
+				<li><button type="button"><span>Djuma Soundsystem / Momento [Audiomatique Recordings]</span></button></li>
+				<li><button type="button"><span>Anja Schneider / Dubmission [Mobilee Records]</span></button></li>
+				<li><button type="button"><span>Stephan Bodzin / Singularity [Herzblut Recordings]</span></button></li>
+				<li><button type="button"><span>Max Cooper / Automnemonic [Traum]</span></button></li>
+				<li><button type="button"><span>Gui Boratto / Antropofagia [Kompakt]</span></button></li>
+				<li><button type="button"><span>Simon Baker / Florence [Truesoul]</span></button></li>
+				<li><button type="button"><span>Kolsch, Gregor Schwellenbach / Talbot Feat. Gregor Schwellenbach [Kompakt]</span></button></li>
+			</ul>
+		</div>
+
+
+		<div id="startup">
+			<p>STARTUP...</p>
+		</div>
+
+		<audio id='over' preload='auto'>
+			<source src='../sound/over.mp3' type='audio/mp3'>
+			<source src='../sound/over.wav' type='audio/wav'>
+		</audio>
+		<audio id='click' preload='auto'>
+			<source src='../sound/click.mp3' type='audio/mp3'>
+			<source src='../sound/click.wav' type='audio/wav'>
+		</audio>
+
+		<script type="text/javascript" src="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/buzz/jquery.mousewheel.min.js"></script>
+		<script type="text/javascript" src="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/buzz/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/buzz/dat.gui.min.js"></script>
+		<script type="text/javascript" src="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/buzz/gl-matrix-min.js"></script>
+		<script type="text/javascript" src="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/buzz/wgl.min.js"></script>
+		<script type="text/javascript" src="https://rawgit.com/lotuslien/lotoloto.me/gh-pages/buzz/main.min.js"></script>
+
+
+	</div>
+</body>
+</html>
