@@ -39,11 +39,11 @@ MX.Tableaux.Slogans = MX.Tableau.extend({
 		ctx.fillRect(0,0,side,side);
 
 		var images = [
-			'http://citizenkade.com/wp-content/uploads/2012/06/scribble.png',
-			'http://citizenkade.com/wp-content/uploads/2012/06/scribble.png',
-			'http://citizenkade.com/wp-content/uploads/2012/06/scribble.png',
-			'http://citizenkade.com/wp-content/uploads/2012/06/scribble.png',
-			'http://citizenkade.com/wp-content/uploads/2012/06/scribble.png'
+			'http://farm3.static.flickr.com/2532/3820296807_2a5845851e_o.png',
+			'http://farm3.static.flickr.com/2532/3820296807_2a5845851e_o.png',
+			'http://farm3.static.flickr.com/2532/3820296807_2a5845851e_o.pngg',
+			'http://farm3.static.flickr.com/2532/3820296807_2a5845851e_o.png',
+			'http://farm3.static.flickr.com/2532/3820296807_2a5845851e_o.png'
 		]
 		
 		var lean = PI/10
