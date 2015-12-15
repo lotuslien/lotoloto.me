@@ -6,7 +6,7 @@ MX.Tableaux.Models = MX.Tableau.extend({
 			width: 100,
 			height: 100,
 			depth: 100,
-			x: 0,
+			x: 20,
 			y: 0,
 			z: 0,
 			rotationY: 0,
@@ -17,11 +17,11 @@ MX.Tableaux.Models = MX.Tableau.extend({
 
 		for (var i = 1; i <= 4; i++) {
 			girl = new MX.Image({
-				src: "http://i.imgur.com/tkRFIyu.gif",
-				x: (100 + (4-i) * 40) * pow(-1, i),
+				src: "https://cloud.githubusercontent.com/assets/8115609/11075775/0d1d3fe4-87c5-11e5-8afa-5a45376c0a23.gif",
+				x: (150 + (4-i) * 40) * pow(-1, i),
 				y: (i-1) * opt.spacingY + opt.y,
 				z: 400 * i + opt.z,
-				scale: 0.5,
+				scale: 1,
 				rotationY: PI/6 * pow(-1, i+1)
 			})
 			scene.add(girl)
