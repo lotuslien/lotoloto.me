@@ -16,14 +16,14 @@ varying vec2 vUv;
 
 void main(void) {
 	vUv = aUv;
-	gl_Position = vec4(aPosition, 0.0, 1.0);
+	gl_Position = vec4(aPosition, 0.0, 2.0);
 }
 	</script>
 
 	<script id="vs_draw" type="x-shader/x-vertex" charset="UTF-8">
 precision mediump float;
 
-const float UNIT = 10000.0;
+const float UNIT = 20000.0;
 
 attribute float aIndex;
 attribute vec3 aColor;
