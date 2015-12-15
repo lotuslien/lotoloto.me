@@ -23,7 +23,7 @@ MX.Tableaux.Slogans = MX.Tableau.extend({
 // 	})
 
 
-		var side = 650
+		var side = 500
 		
 		var pattern = document.createElement("canvas")
 		pattern.width = side
@@ -32,8 +32,8 @@ MX.Tableaux.Slogans = MX.Tableau.extend({
 		var ctx = pattern.getContext("2d");
 
 		var grd = ctx.createLinearGradient(0,0,170,0);
-		grd.addColorStop(0, "blue");
-		grd.addColorStop(1, "blue");
+		grd.addColorStop(0, "black");
+		grd.addColorStop(1, "black");
 
 		ctx.fillStyle = grd;
 		ctx.fillRect(0,0,side,side);
