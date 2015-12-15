@@ -126,39 +126,7 @@ app.init = function () {
 	})
 	
 	loader.preloadImages([
-		'http://okfocus.s3.amazonaws.com/kenzo/img/waves_blue.png',
-		'http://okfocus.s3.amazonaws.com/kenzo/img/PATTERNS/bg-4.jpg',
-		'http://okfocus.s3.amazonaws.com/kenso/underwater/bwrepeat2.png',
-		'http://i.asdf.us/im/fc/gradient_white-MediumOrchid3_1332202989_bky.jpg',
-		'http://i.asdf.us/im/0c/gradient_teal-purple_1330660041.png',
-		'http://okfocus.s3.amazonaws.com/kenso/underwater/fish1.png',
-		'http://okfocus.s3.amazonaws.com/kenso/underwater/fish2.png',
-		'http://okfocus.s3.amazonaws.com/kenso/underwater/fish3.png',
-		'http://okfocus.s3.amazonaws.com/kenso/underwater/fish4.png',
-		'http://okfocus.s3.amazonaws.com/kenzo/img/svg/no-fish-no-nothing.svg',
-		'http://okfocus.s3.amazonaws.com/kenzo/img/1.png',
-		'http://okfocus.s3.amazonaws.com/kenzo/img/2.png',
-		'http://okfocus.s3.amazonaws.com/kenzo/img/3.png',
-		'http://okfocus.s3.amazonaws.com/kenzo/img/4.png',
-		'http://okfocus.s3.amazonaws.com/kenzo/img/5.png',
-		'http://okfocus.s3.amazonaws.com/kenzo/img/6.png',
-		'http://okfocus.s3.amazonaws.com/kenzo/img/7.png',
-		'http://okfocus.s3.amazonaws.com/kenzo/img/8.png',
-		'http://okfocus.s3.amazonaws.com/kenzo/img/9.png',
-		'http://dumpfm.s3.amazonaws.com/images/20120209/1328764462143-dumpfm-qil-water3b.gif',
-		'http://okfocus.s3.amazonaws.com/kenzo/img/svg/fish1.svg',
-		'http://okfocus.s3.amazonaws.com/kenzo/img/svg/fish2.svg',
-		'http://okfocus.s3.amazonaws.com/kenzo/img/svg/fish3.svg',
-		'http://okfocus.s3.amazonaws.com/kenzo/img/svg/fish4.svg',
-		'http://okfocus.s3.amazonaws.com/kenzo/img/svg/jellyfish1.svg',
-		'http://okfocus.s3.amazonaws.com/kenzo/img/svg/shark1.svg',
-		'http://okfocus.s3.amazonaws.com/kenzo/img/svg/shark2.svg',
-		'http://okfocus.s3.amazonaws.com/kenzo/img/svg/sponge1.svg',
-		'http://okfocus.s3.amazonaws.com/kenzo/img/svg/starfish1.svg',
-		'http://okfocus.s3.amazonaws.com/kenzo/img/svg/stingray1.svg',
-		'http://okfocus.s3.amazonaws.com/kenzo/img/svg/swordfish1.svg',
-		'http://okfocus.s3.amazonaws.com/kenzo/img/svg/whale1.svg',
-		'http://okfocus.s3.amazonaws.com/kenzo/img/svg/whale2.svg'
+	
 	])
 	
 	$("#looks a").on("mousedown", function(e){ e.stopPropagation() })
