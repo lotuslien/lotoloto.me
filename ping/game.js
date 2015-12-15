@@ -1,28 +1,23 @@
-// scene object variables
+
 var renderer, scene, camera, pointLight, spotLight;
 
-// field variables
 var fieldWidth = 300, fieldHeight = 200;
 
-// paddle variables
+
 var paddleWidth, paddleHeight, paddleDepth, paddleQuality;
 var paddle1DirY = 0, paddle2DirY = 0, paddleSpeed = 3;
 
-// ball variables
+
 var ball, paddle1, paddle2;
 var ballDirX = 1, ballDirY = 1, ballSpeed = 2;
 
-// game-related variables
 var score1 = 0, score2 = 0;
-// you can change this to any positive whole number
+
 var maxScore = 7;
 
-// set opponent reflexes (0 - easiest, 1 - hardest)
+
 var difficulty = 0.9;
 
-// ------------------------------------- //
-// ------- GAME FUNCTIONS -------------- //
-// ------------------------------------- //
 
 function setup()
 {
@@ -108,7 +103,7 @@ function createScene()
 		{
 		  color: 0xffb90f
 		});
-	// create the ground's material
+
 	var groundMaterial =
 	  new THREE.MeshLambertMaterial(
 		{
@@ -116,11 +111,11 @@ function createScene()
 		});
 		
 		
-	// create the playing surface plane
+
 	var plane = new THREE.Mesh(
 
 	  new THREE.PlaneGeometry(
-		planeWidth * 0.95,	// 95% of table width, since we want to show where the ball goes out-of-bounds
+		planeWidth * 0.95,	
 		planeHeight,
 		planeQuality,
 		planeQuality),
@@ -133,15 +128,15 @@ function createScene()
 	var table = new THREE.Mesh(
 
 	  new THREE.CubeGeometry(
-		planeWidth * 1.05,	// this creates the feel of a billiards table, with a lining
+		planeWidth * 1.05,
 		planeHeight * 1.03,
-		100,				// an arbitrary depth, the camera can't see much of it anyway
+		100,			
 		planeQuality,
 		planeQuality,
 		1),
 
 	  tableMaterial);
-	table.position.z = -51;	// we sink the table into the ground by 50 units. The extra 1 is so the plane can be seen
+	table.position.z = -51;	
 	scene.add(table);
 	table.receiveShadow = true;	
 
@@ -165,17 +160,17 @@ function createScene()
 
 	  sphereMaterial);
 
-	// // add the sphere to the scene
+	
 	scene.add(ball);
 	
 	ball.position.x = 0;
 	ball.position.y = 0;
-	// set ball above the table surface
+	
 	ball.position.z = radius;
 	ball.receiveShadow = true;
     ball.castShadow = true;
 	
-	// // set up the paddle vars
+	
 	paddleWidth = 10;
 	paddleHeight = 30;
 	paddleDepth = 10;
@@ -194,11 +189,11 @@ function createScene()
 	  paddle1Material);
 
 		
-	// create the playing surface plane
+
 	var plane = new THREE.Mesh(
 
 	  new THREE.PlaneGeometry(
-		planeWidth * 0.95,	// 95% of table width, since we want to show where the ball goes out-of-bounds
+		planeWidth * 0.95,	
 		planeHeight,
 		planeQuality,
 		planeQuality),
@@ -211,15 +206,15 @@ function createScene()
 	var table = new THREE.Mesh(
 
 	  new THREE.CubeGeometry(
-		planeWidth * 1.05,	// this creates the feel of a billiards table, with a lining
+		planeWidth * 1.05,	
 		planeHeight * 1.03,
-		100,				// an arbitrary depth, the camera can't see much of it anyway
+		100,			
 		planeQuality,
 		planeQuality,
 		1),
 
 	  tableMaterial);
-	table.position.z = -51;	// we sink the table into the ground by 50 units. The extra 1 is so the plane can be seen
+	table.position.z = -51;	
 	scene.add(table);
 	table.receiveShadow = true;	
 		
@@ -334,11 +329,11 @@ function createScene()
 	ground.receiveShadow = true;	
 	scene.add(ground);		
 		
-	// // create a point light
+
 	pointLight =
 	  new THREE.PointLight(0x754C78);
 
-	// set its position
+
 	pointLight.position.x = -1000;
 	pointLight.position.y = 0;
 	pointLight.position.z = 1000;
@@ -454,7 +449,7 @@ function opponentPaddleMovement()
 
 function playerPaddleMovement()
 {
-	// move left
+	
 	if (Key.isDown(Key.A))		
 	{
 	
