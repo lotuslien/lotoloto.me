@@ -58,7 +58,7 @@ environment.init = function(){
 		gap: 1000,
 		z: 2000,
 		y: -250,
-		spacingY: 500,
+		spacingY: 1000,
 	})
 
 	var waves = new MX.Tableaux.Waves({
