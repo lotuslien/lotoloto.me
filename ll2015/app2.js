@@ -35,16 +35,16 @@ environment.init = function(){
 	// intro floor, models, etc
 
 	var floor = new MX.Tableaux.Floor({
-		width: 2500,
+		width: 5000,
 		depth: 6000,
-		scale: 3,
+		scale: 5,
 		y: -1010,
 		z: 2000,
 		scale: 3,
-		y: 150,
+		y: 350,
 		z: 5000,
-		rotationX: -PI/20,
-		backgroundImage: "https://cloud.githubusercontent.com/assets/8115609/11370532/35120106-9292-11e5-9920-231a7f9ee1ae.png"
+		rotationX: -PI/10,
+		backgroundImage: "http://dumpfm.s3.amazonaws.com/images/20120209/1328764462143-dumpfm-qil-water3b.gif"
 	})
 
 	var intro = new MX.Tableaux.IntroText({
