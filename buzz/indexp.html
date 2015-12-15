@@ -23,7 +23,7 @@ void main(void) {
 	<script id="vs_draw" type="x-shader/x-vertex" charset="UTF-8">
 precision mediump float;
 
-const float UNIT = 20000.0;
+const float UNIT = 10000.0;
 
 attribute float aIndex;
 attribute vec3 aColor;
@@ -40,9 +40,9 @@ void main(void) {
 	vec4 node = texture2D(texture, uv) * 2.0 - 1.0;
 	node.xy = node.xy * UNIT / canvasSize;
 
-	vColor = vec4(aColor, 0.9);
+	vColor = vec4(aColor, 0x91219E);
 	gl_Position = vec4(node.xy, 0.0, 1.0);
-	gl_PointSize = 1.0;
+	gl_PointSize = 2.0;
 }
 	</script>
 
