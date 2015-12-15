@@ -1,3 +1,6 @@
+Interactive Presentation
+Compile Mograph 
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,9 +43,9 @@ void main(void) {
 	vec4 node = texture2D(texture, uv) * 2.0 - 1.0;
 	node.xy = node.xy * UNIT / canvasSize;
 
-	vColor = vec4(aColor, 0x91219E);
+	vColor = vec4(aColor, 0.9);
 	gl_Position = vec4(node.xy, 0.0, 1.0);
-	gl_PointSize = .5;
+	gl_PointSize = 1.0;
 }
 	</script>
 
@@ -226,16 +229,6 @@ void main(void) {
 		<div id="startup">
 			<p>STARTUP...</p>
 		</div>
-		
-		<audio id='over' preload='auto'>
-			<source src='../sound/over.mp3' type='audio/mp3'>
-			<source src='../sound/over.wav' type='audio/wav'>
-		</audio>
-		<audio id='click' preload='auto'>
-			<source src='../sound/click.mp3' type='audio/mp3'>
-			<source src='../sound/click.wav' type='audio/wav'>
-		</audio>
-
 
 
 
