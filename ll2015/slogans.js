@@ -23,7 +23,7 @@ MX.Tableaux.Slogans = MX.Tableau.extend({
 // 	})
 
 
-		var side = 500
+		var side = 650
 		
 		var pattern = document.createElement("canvas")
 		pattern.width = side
@@ -32,18 +32,18 @@ MX.Tableaux.Slogans = MX.Tableau.extend({
 		var ctx = pattern.getContext("2d");
 
 		var grd = ctx.createLinearGradient(0,0,170,0);
-		grd.addColorStop(0, "black");
-		grd.addColorStop(1, "black");
+		grd.addColorStop(0, "blue");
+		grd.addColorStop(1, "blue");
 
 		ctx.fillStyle = grd;
 		ctx.fillRect(0,0,side,side);
 
 		var images = [
-			'https://openclipart.org/download/130171/Grunge-02.svg',
-			'https://openclipart.org/download/130171/Grunge-02.svg',
-			'https://openclipart.org/download/130171/Grunge-02.svg',
-			'https://openclipart.org/download/130171/Grunge-02.svg',
-			'https://openclipart.org/download/130171/Grunge-02.svg'
+			'http://citizenkade.com/wp-content/uploads/2012/06/scribble.png',
+			'http://citizenkade.com/wp-content/uploads/2012/06/scribble.png',
+			'http://citizenkade.com/wp-content/uploads/2012/06/scribble.png',
+			'http://citizenkade.com/wp-content/uploads/2012/06/scribble.png',
+			'http://citizenkade.com/wp-content/uploads/2012/06/scribble.png'
 		]
 		
 		var lean = PI/10
