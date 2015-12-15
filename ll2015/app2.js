@@ -54,11 +54,13 @@ environment.init = function(){
 		rotationX: Math.PI/20
 	})
 	
-	var models = new MX.Tableaux.Models({
+		var models = new MX.Tableaux.Models({
+		gap: 1000,
+		z: 2000,
 	
 		z: 900,
-		y: -250,
-		spacingY: 1000,
+ 		y: -250,
+ 		spacingY: 1000,
 	})
 
 	var waves = new MX.Tableaux.Waves({
