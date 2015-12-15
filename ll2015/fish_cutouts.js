@@ -23,21 +23,21 @@ MX.Tableaux.FishCutouts = MX.Tableau.extend({
 			patternSrc: "http://www.transparenttextures.com/patterns/concrete-wall.png"
 		})
 	
-		var fish_base = 'http://www.transparenttextures.com/patterns/'
+		var fish_base = 'http://okfocus.s3.amazonaws.com/kenso/underwater/'
 		var fish_svgs = [
-			'concrete-wall.png',
-			'concrete-wall.png',
-			'concrete-wall.png',
-			'concrete-wall.png',
-			'concrete-wall.png',
-			'concrete-wall.png',
-			'concrete-wall.png',
-			'concrete-wall.png',
-			'concrete-wall.png',
-			'concrete-wall.png',
-			'concrete-wall.png',
-			'concrete-wall.png',
-			'concrete-wall.png'
+			'bwrepeat2.png',
+			'bwrepeat2.png',
+			'bwrepeat2.png',
+			'bwrepeat2.png',
+			'bwrepeat2.png',
+			'bwrepeat2.png',
+			'bwrepeat2.png',
+			'bwrepeat2.png',
+			'bwrepeat2.png',
+			'bwrepeat2.png',
+			'bwrepeat2.png',
+			'bwrepeat2.png',
+			'bwrepeat2.png'
 		]
 		opt.xRange /= 2
 		opt.zRange /= 2
