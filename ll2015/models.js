@@ -15,7 +15,7 @@ MX.Tableaux.Models = MX.Tableau.extend({
 			spacingY: 0,
 		})
 
-		for (var i = 1; i <= 4; i++) {
+		for (var i = 1; i <= 6; i++) {
 			girl = new MX.Image({
 				src: "https://cloud.githubusercontent.com/assets/8115609/11075775/0d1d3fe4-87c5-11e5-8afa-5a45376c0a23.gif",
 				x: (150 + (4-i) * 40) * pow(-1, i),
