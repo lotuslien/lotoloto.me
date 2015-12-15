@@ -44,7 +44,7 @@ environment.init = function(){
 		y: 350,
 		z: 5000,
 		rotationX: -PI/10,
-		backgroundImage: "http://dumpfm.s3.amazonaws.com/images/20120209/1328764462143-dumpfm-qil-water3b.gif"
+		backgroundImage: "http://www.transparenttextures.com/patterns/concrete-wall-2.png"
 	})
 
 	var intro = new MX.Tableaux.IntroText({
@@ -55,9 +55,10 @@ environment.init = function(){
 	})
 	
 	var models = new MX.Tableaux.Models({
+		gap: 1000,
 		z: 2000,
 		y: -250,
-		spacingY: 63,
+		spacingY: 500,
 	})
 
 	var waves = new MX.Tableaux.Waves({
@@ -66,7 +67,7 @@ environment.init = function(){
 	})
 //fish pattern color overlay 
 	this.fishCutouts = new MX.Tableaux.FishCutouts({
-		fishCount: 10,
+		fishCount: 6,
 		x: 0,
 		y: 500,
 		z: 500,
@@ -75,7 +76,7 @@ environment.init = function(){
 		zRange: 1500,
 		speed: -Math.PI / 600,
 		className: "fish",
-		patternSrc: "http://okfocus.s3.amazonaws.com/kenso/underwater/bwrepeat2.png",
+		patternSrc: "http://www.transparenttextures.com/patterns/concrete-wall-2.png",
 	})
 //fish pattern color overlay 
 	this.fishCutouts2 = new MX.Tableaux.FishCutouts({
@@ -88,7 +89,7 @@ environment.init = function(){
 		zRange: 3000,
 		speed: Math.PI / 400,
 		className: "fish",
-		patternSrc: "http://okfocus.s3.amazonaws.com/kenso/underwater/bwrepeat2.png",
+		patternSrc: "http://www.transparenttextures.com/patterns/concrete-wall-2.png",
 	})
 
 	this.fishCutouts3 = new MX.Tableaux.FishCutouts({
@@ -101,7 +102,7 @@ environment.init = function(){
 		zRange: 2000,
 		speed: -Math.PI / 500,
 		className: "fish",
-		patternSrc: "http://okfocus.s3.amazonaws.com/kenso/underwater/bwrepeat2.png",
+		patternSrc: "http://www.transparenttextures.com/patterns/concrete-wall-2.png",
 	})
 
 
@@ -113,7 +114,7 @@ environment.init = function(){
 		height: 400,
 		depth: 400,
 		x: 0,
-		y: 1000,
+		y: 1200,
 		z: 13500,
 		padding: 50,
 		scale: 10,
@@ -128,7 +129,7 @@ environment.init = function(){
 		minScale: 1.0,
 		maxScale: 1.0,
 		centerRadius: 600,
-		radius: 400,
+		radius: 300,
 		height: 500,
 		speed: -PI / 1200,
 	})
