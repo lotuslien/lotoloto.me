@@ -10,7 +10,7 @@ environment.init = function(){
 		"y": 0,
 		"z": 0,
 		"rotationX": 0.085,
-		"rotationY": 0.020
+		"rotationY": 0.025
 	})
 	map && map.zoom(3.10) && map.recenter()
 
@@ -44,7 +44,7 @@ environment.init = function(){
 		y: 150,
 		z: 5000,
 		rotationX: -PI/20,
-		backgroundImage: "https://cloud.githubusercontent.com/assets/8115609/11370532/35120106-9292-11e5-9920-231a7f9ee1ae.png"
+		backgroundImage: "http://dumpfm.s3.amazonaws.com/images/20120209/1328764462143-dumpfm-qil-water3b.gif"
 	})
 
 	var intro = new MX.Tableaux.IntroText({
@@ -64,7 +64,7 @@ environment.init = function(){
 		gap: 1000,
 		z: 5000
 	})
-//fish pattern color overlay 
+
 	this.fishCutouts = new MX.Tableaux.FishCutouts({
 		fishCount: 10,
 		x: 0,
@@ -75,9 +75,9 @@ environment.init = function(){
 		zRange: 1500,
 		speed: -Math.PI / 600,
 		className: "fish",
-		patternSrc: "http://okfocus.s3.amazonaws.com/kenso/underwater/bwrepeat2.png",
+		patternSrc: "http://oi47.tinypic.com/2u8fhmx.jpg",
 	})
-//fish pattern color overlay 
+
 	this.fishCutouts2 = new MX.Tableaux.FishCutouts({
 		fishCount: 10,
 		x: 0,
@@ -88,7 +88,7 @@ environment.init = function(){
 		zRange: 3000,
 		speed: Math.PI / 400,
 		className: "fish",
-		patternSrc: "http://okfocus.s3.amazonaws.com/kenso/underwater/bwrepeat2.png",
+		patternSrc: "http://oi47.tinypic.com/2u8fhmx.jpg",
 	})
 
 	this.fishCutouts3 = new MX.Tableaux.FishCutouts({
@@ -101,7 +101,7 @@ environment.init = function(){
 		zRange: 2000,
 		speed: -Math.PI / 500,
 		className: "fish",
-		patternSrc: "http://okfocus.s3.amazonaws.com/kenso/underwater/bwrepeat2.png",
+		patternSrc: "http://oi47.tinypic.com/2u8fhmx.jpg",
 	})
 
 
@@ -115,7 +115,7 @@ environment.init = function(){
 		x: 0,
 		y: 1000,
 		z: 13500,
-		padding: 50,
+		padding: 30,
 		scale: 10,
 	})
 
