@@ -14,25 +14,6 @@ environment.init = function(){
 	})
 	map && map.zoom(3.10) && map.recenter()
 
-// 	scene.camera.move({
-// 		"x": 147,
-// 		"y": 1548,
-// 		"z": -4053,
-// 		"rotationX": 0.085,
-// 		"rotationY": 0.025
-// 	}, false)
-// 
-// 
-// 	scene.camera.move({
-// 		"x": -3187,
-// 		"y": 708,
-// 		"z": 707,
-// 		"rotationX": 0.085,
-// 		"rotationY": -0.776
-// 	}, false)
-
-	//
-	// intro floor, models, etc
 
 	var floor = new MX.Tableaux.Floor({
 		width: 2500,
@@ -105,9 +86,6 @@ environment.init = function(){
 	})
 
 
-	//
-	// huge rotating box
-
 	box = new MX.Tableaux.WaterBox({
 		width: 400,
 		height: 400,
@@ -166,14 +144,7 @@ environment.init = function(){
 		rotationY: PI,
 	})
 
-	// ok!
-// 	scene.camera.move({
-// 		"x": -20,
-// 		"y": 3200,
-// 		"z": 10060,
-// 		"rotationX": 0.432,
-// 		"rotationY": 3.16
-// 	})
+
 
 }
 
@@ -182,7 +153,7 @@ var in_box = false
 
 environment.update = function(t){
 
-	// add continuous animations and stuff here
+
 	
 	if (! in_box) {
 		box.update(t)
