@@ -59,7 +59,7 @@ MX.Movements = function (cam, viewHeight) {
 						break
 
 					case 81: // q
-						turnLeft = true
+						turnDown = true
 						break
 							
 					case 69: // e
@@ -129,7 +129,7 @@ MX.Movements = function (cam, viewHeight) {
 						break
 
 					case 81: // q
-						turnLeft = false
+						turnUp = false
 						break
 							
 					case 69: // e
