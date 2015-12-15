@@ -36,12 +36,12 @@ environment.init = function(){
 
 	var floor = new MX.Tableaux.Floor({
 		width: 5000,
-		depth: 6000,
-		scale: 5,
+		depth: 5000,
+		scale: 3,
 		y: -1010,
 		z: 2000,
 		scale: 3,
-		y: 350,
+		y: 250,
 		z: 5000,
 		rotationX: -PI/10,
 		backgroundImage: "http://www.transparenttextures.com/patterns/concrete-wall-2.png"
@@ -49,7 +49,7 @@ environment.init = function(){
 
 	var intro = new MX.Tableaux.IntroText({
 		x: 100,
-		y: 700,
+		y: 100,
 		z: -2100,
 		rotationX: Math.PI/20
 	})
