@@ -55,8 +55,8 @@ environment.init = function(){
 	})
 	
 	var models = new MX.Tableaux.Models({
-		gap: 1000,
-		z: 2000,
+	
+		z: 900,
 		y: -250,
 		spacingY: 1000,
 	})
